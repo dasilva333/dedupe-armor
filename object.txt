@@ -1,0 +1,14 @@
+[
+    "\n\nhunter Helmet \"Wing Contender\" light:=623 items:8 hasMod:false 6917529084809157578\n\"Ashes to Assets\" \"Heavy Ammo Finder\" 4\n\"Ashes to Assets\" \"Rocket Launcher Reserves\" 4\n\"Fusion Rifle Targeting\" \"Heavy Ammo Finder\" 2\n\"Fusion Rifle Targeting\" \"Rocket Launcher Reserves\" 2",
+    "\n\nhunter Helmet \"Vanguard Dare Casque\" light:=10 items:2 hasMod:false 6917529084531214827\n\"Pump Action\" \"Linear Fusion Rifle Reserves\" 5\n\"Pump Action\" \"Grenade Launcher Reserves\" 3\n\"Heavy Lifting\" \"Linear Fusion Rifle Reserves\" 2\n\"Heavy Lifting\" \"Grenade Launcher Reserves\" 2",
+    "\n\nhunter Chest Armor \"Prodigal Vest\" light:=626 items:2 hasMod:false 6917529084963245994\n\"Unflinching Energy Aim\" \"Special Ammo Finder\" 3\n\"Unflinching Submachine Gun Aim\" \"Special Ammo Finder\" 2",
+    "\n\nhunter Chest Armor \"Ancient Apocalypse Vest\" light:=636 items:4 hasMod:true 6917529084199786165\n\"Unflinching Rifle Aim\" \"Special Ammo Finder\" 3\n\"Unflinching Energy Aim\" \"Special Ammo Finder\" 3",
+    "\n\nhunter Leg Armor \"Prodigal Strides\" light:=628 items:3 hasMod:false 6917529084933074574\n\"Traction\" \"Submachine Gun Scavenger\" 2\n\"Traction\" \"Hand Cannon Scavenger\" 2\n\"Auto Rifle Dexterity\" \"Submachine Gun Scavenger\" 2\n\"Auto Rifle Dexterity\" \"Hand Cannon Scavenger\" 3",
+    "\n\nhunter Leg Armor \"Wing Contender\" light:=581 items:8 hasMod:false 6917529082848539744\n\"Dynamo\" \"Sidearm Scavenger\" 2\n\"Perpetuation\" \"Sidearm Scavenger\" 2",
+    "\n\nhunter Leg Armor \"Vanguard Dare Boots\" light:=10 items:2 hasMod:false 6917529083249535167\nNo Desired Combos Available",
+    "\n\nhunter Leg Armor \"Tangled Web Strides\" light:=616 items:6 hasMod:false 6917529084644326694\n\"Bomber\" \"Sidearm Scavenger\" 6",
+    "\n\nhunter Leg Armor \"Prodigal Strides\" light:=609 items:3 hasMod:false 6917529082688266477\n\"Shotgun Dexterity\" \"Sidearm Scavenger\" 2",
+    "\n\nhunter Hunter Cloak \"Tangled Web Cloak\" light:=649 items:4 hasMod:false 6917529084969089363\n\"Recuperation\" \"Shotgun Scavenger\" 2\n\"Recuperation\" \"Rocket Launcher Reserves\" 2",
+    "\n\nhunter Hunter Cloak \"Prodigal Cloak\" light:=595 items:8 hasMod:false 6917529084257707395\n\"Recuperation\" \"Rocket Launcher Reserves\" 2\n\"Innervation\" \"Rocket Launcher Reserves\" 3",
+    "\n\nhunter Hunter Cloak \"Wing Contender\" light:=625 items:4 hasMod:false 6917529084878131866\n\"Better Already\" \"Machine Gun Reserves\" 3\n\"Better Already\" \"Sniper Rifle Scavenger\" 2"
+]

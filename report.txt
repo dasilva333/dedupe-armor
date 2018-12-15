@@ -1,0 +1,52 @@
+
+
+hunter Helmet "Wing Contender" light:=623 items:8 hasMod:false 6917529084809157578
+"Ashes to Assets" "Heavy Ammo Finder" 4
+"Ashes to Assets" "Rocket Launcher Reserves" 4
+"Fusion Rifle Targeting" "Heavy Ammo Finder" 2
+"Fusion Rifle Targeting" "Rocket Launcher Reserves" 2
+
+hunter Helmet "Vanguard Dare Casque" light:=10 items:2 hasMod:false 6917529084531214827
+"Pump Action" "Linear Fusion Rifle Reserves" 5
+"Pump Action" "Grenade Launcher Reserves" 3
+"Heavy Lifting" "Linear Fusion Rifle Reserves" 2
+"Heavy Lifting" "Grenade Launcher Reserves" 2
+
+hunter Chest Armor "Prodigal Vest" light:=626 items:2 hasMod:false 6917529084963245994
+"Unflinching Energy Aim" "Special Ammo Finder" 3
+"Unflinching Submachine Gun Aim" "Special Ammo Finder" 2
+
+hunter Chest Armor "Ancient Apocalypse Vest" light:=636 items:4 hasMod:true 6917529084199786165
+"Unflinching Rifle Aim" "Special Ammo Finder" 3
+"Unflinching Energy Aim" "Special Ammo Finder" 3
+
+hunter Leg Armor "Prodigal Strides" light:=628 items:3 hasMod:false 6917529084933074574
+"Traction" "Submachine Gun Scavenger" 2
+"Traction" "Hand Cannon Scavenger" 2
+"Auto Rifle Dexterity" "Submachine Gun Scavenger" 2
+"Auto Rifle Dexterity" "Hand Cannon Scavenger" 3
+
+hunter Leg Armor "Wing Contender" light:=581 items:8 hasMod:false 6917529082848539744
+"Dynamo" "Sidearm Scavenger" 2
+"Perpetuation" "Sidearm Scavenger" 2
+
+hunter Leg Armor "Vanguard Dare Boots" light:=10 items:2 hasMod:false 6917529083249535167
+No Desired Combos Available
+
+hunter Leg Armor "Tangled Web Strides" light:=616 items:6 hasMod:false 6917529084644326694
+"Bomber" "Sidearm Scavenger" 6
+
+hunter Leg Armor "Prodigal Strides" light:=609 items:3 hasMod:false 6917529082688266477
+"Shotgun Dexterity" "Sidearm Scavenger" 2
+
+hunter Hunter Cloak "Tangled Web Cloak" light:=649 items:4 hasMod:false 6917529084969089363
+"Recuperation" "Shotgun Scavenger" 2
+"Recuperation" "Rocket Launcher Reserves" 2
+
+hunter Hunter Cloak "Prodigal Cloak" light:=595 items:8 hasMod:false 6917529084257707395
+"Recuperation" "Rocket Launcher Reserves" 2
+"Innervation" "Rocket Launcher Reserves" 3
+
+hunter Hunter Cloak "Wing Contender" light:=625 items:4 hasMod:false 6917529084878131866
+"Better Already" "Machine Gun Reserves" 3
+"Better Already" "Sniper Rifle Scavenger" 2
