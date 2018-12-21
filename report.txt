@@ -1,52 +1,126 @@
 
+total junk items:24
 
-hunter Helmet "Wing Contender" light:=623 items:8 hasMod:false 6917529084809157578
-"Ashes to Assets" "Heavy Ammo Finder" 4
-"Ashes to Assets" "Rocket Launcher Reserves" 4
+hunter Helmet "Prodigal Mask" light:=612 items:8 hasMod:false 6917529082645743311
+"Precision Weapon Targeting" "Sniper Rifle Reserves" 4
+"Precision Weapon Targeting" "Shotgun Reserves" 2
+"Hands-On" "Sniper Rifle Reserves" 2
+"Hands-On" "Shotgun Reserves" 3
+
+hunter Helmet "Red Moon Phantom Mask" light:=632 items:13 hasMod:false 6917529085547920716
+"Machine Gun Targeting" "Sword Reserves" 2
+"Machine Gun Targeting" "Shotgun Reserves" 3
+"Heavy Lifting" "Sword Reserves" 3
+
+hunter Helmet "Red Moon Phantom Mask" light:=632 items:13 hasMod:false 6917529085547918025
+"Submachine Gun Targeting" "Special Ammo Finder" 4
+"Submachine Gun Targeting" "Shotgun Reserves" 2
+"Shotgun Targeting" "Special Ammo Finder" 4
+"Shotgun Targeting" "Shotgun Reserves" 3
+
+hunter Helmet "Tangled Web Mask" light:=624 items:11 hasMod:true 6917529083828645599
+"Remote Connection" "Machine Gun Reserves" 4
+"Remote Connection" "Shotgun Reserves" 4
+"Fusion Rifle Targeting" "Machine Gun Reserves" 2
+"Fusion Rifle Targeting" "Shotgun Reserves" 2
+
+hunter Helmet "Prodigal Mask" light:=606 items:8 hasMod:false 6917529083890704034
+"Scatter Projectile Targeting" "Fusion Rifle Reserves" 2
+"Hand Cannon Targeting" "Sniper Rifle Reserves" 2
+
+hunter Helmet "Tangled Web Mask" light:=600 items:11 hasMod:false 6917529082848537413
+"Sniper Rifle Targeting" "Special Ammo Finder" 2
+"Submachine Gun Targeting" "Heavy Ammo Finder" 2
+"Submachine Gun Targeting" "Special Ammo Finder" 4
+
+hunter Helmet "Tangled Web Mask" light:=608 items:11 hasMod:false 6917529080162909902
+"Ashes to Assets" "Special Ammo Finder" 2
+"Ashes to Assets" "Linear Fusion Rifle Reserves" 4
+"Shotgun Targeting" "Special Ammo Finder" 4
+"Shotgun Targeting" "Linear Fusion Rifle Reserves" 3
+
+hunter Helmet "Scatterhorn Mask" light:=632 items:6 hasMod:false 6917529085547916699
+"Kinetic Weapon Targeting" "Machine Gun Reserves" 2
+"Kinetic Weapon Targeting" "Heavy Ammo Finder" 2
+"Fusion Rifle Targeting" "Machine Gun Reserves" 2
 "Fusion Rifle Targeting" "Heavy Ammo Finder" 2
-"Fusion Rifle Targeting" "Rocket Launcher Reserves" 2
 
-hunter Helmet "Vanguard Dare Casque" light:=10 items:2 hasMod:false 6917529084531214827
-"Pump Action" "Linear Fusion Rifle Reserves" 5
-"Pump Action" "Grenade Launcher Reserves" 3
+hunter Helmet "Wing Contender" light:=631 items:8 hasMod:false 6917529085550932160
+"Hands-On" "Special Ammo Finder" 3
+"Hands-On" "Shotgun Reserves" 3
+"Ashes to Assets" "Special Ammo Finder" 2
+"Ashes to Assets" "Shotgun Reserves" 5
+
+hunter Helmet "Woven Firesmith Mask" light:=650 items:2 hasMod:false 6917529085585578257
+"Heavy Lifting" "Heavy Ammo Finder" 3
 "Heavy Lifting" "Linear Fusion Rifle Reserves" 2
-"Heavy Lifting" "Grenade Launcher Reserves" 2
 
-hunter Chest Armor "Prodigal Vest" light:=626 items:2 hasMod:false 6917529084963245994
-"Unflinching Energy Aim" "Special Ammo Finder" 3
-"Unflinching Submachine Gun Aim" "Special Ammo Finder" 2
+hunter Helmet "Red Moon Phantom Mask" light:=632 items:13 hasMod:false 6917529085553756823
+"Scatter Projectile Targeting" "Fusion Rifle Reserves" 2
+"Remote Connection" "Shotgun Reserves" 4
+"Remote Connection" "Fusion Rifle Reserves" 4
 
-hunter Chest Armor "Ancient Apocalypse Vest" light:=636 items:4 hasMod:true 6917529084199786165
+hunter Helmet "Woven Firesmith Mask" light:=629 items:2 hasMod:true 6917529084394561644
+"Heavy Lifting" "Heavy Ammo Finder" 3
+"Heavy Lifting" "Linear Fusion Rifle Reserves" 2
+"Ashes to Assets" "Heavy Ammo Finder" 3
+"Ashes to Assets" "Linear Fusion Rifle Reserves" 4
+
+hunter Gauntlets "Prodigal Grasps" light:=631 items:7 hasMod:false 6917529085606631975
+"Momentum Transfer" "Heavy Ammo Finder" 7
+"Momentum Transfer" "Shotgun Scavenger" 5
+"Hand Cannon Loader" "Heavy Ammo Finder" 4
+"Hand Cannon Loader" "Shotgun Scavenger" 5
+
+hunter Chest Armor "Red Moon Phantom Vest" light:=625 items:6 hasMod:false 6917529085609095979
+"Unflinching Submachine Gun Aim" "Special Ammo Finder" 4
+
+hunter Chest Armor "Red Moon Phantom Vest" light:=632 items:6 hasMod:false 6917529085544612762
 "Unflinching Rifle Aim" "Special Ammo Finder" 3
-"Unflinching Energy Aim" "Special Ammo Finder" 3
+"Unflinching Fusion Rifle Aim" "Special Ammo Finder" 2
 
-hunter Leg Armor "Prodigal Strides" light:=628 items:3 hasMod:false 6917529084933074574
-"Traction" "Submachine Gun Scavenger" 2
-"Traction" "Hand Cannon Scavenger" 2
-"Auto Rifle Dexterity" "Submachine Gun Scavenger" 2
-"Auto Rifle Dexterity" "Hand Cannon Scavenger" 3
+hunter Leg Armor "Red Moon Phantom Steps" light:=619 items:10 hasMod:false 6917529082680294066
+"Scout Rifle Dexterity" "Hand Cannon Scavenger" 2
+"Pulse Rifle Dexterity" "Hand Cannon Scavenger" 3
 
-hunter Leg Armor "Wing Contender" light:=581 items:8 hasMod:false 6917529082848539744
+hunter Leg Armor "Tangled Web Strides" light:=626 items:9 hasMod:false 6917529085603527069
 "Dynamo" "Sidearm Scavenger" 2
-"Perpetuation" "Sidearm Scavenger" 2
+"Dynamo" "Hand Cannon Scavenger" 2
+"Scout Rifle Dexterity" "Sidearm Scavenger" 2
+"Scout Rifle Dexterity" "Hand Cannon Scavenger" 2
 
-hunter Leg Armor "Vanguard Dare Boots" light:=10 items:2 hasMod:false 6917529083249535167
-No Desired Combos Available
+hunter Leg Armor "Prodigal Strides" light:=631 items:5 hasMod:false 6917529085345383868
+"Scout Rifle Dexterity" "Sidearm Scavenger" 2
+"Linear Fusion Dexterity" "Sidearm Scavenger" 2
 
-hunter Leg Armor "Tangled Web Strides" light:=616 items:6 hasMod:false 6917529084644326694
-"Bomber" "Sidearm Scavenger" 6
+hunter Leg Armor "Tangled Web Strides" light:=630 items:9 hasMod:false 6917529085585580097
+"Machine Gun Dexterity" "Hand Cannon Scavenger" 2
+"Perpetuation" "Hand Cannon Scavenger" 3
 
-hunter Leg Armor "Prodigal Strides" light:=609 items:3 hasMod:false 6917529082688266477
-"Shotgun Dexterity" "Sidearm Scavenger" 2
+hunter Hunter Cloak "Prodigal Cloak" light:=630 items:11 hasMod:false 6917529082836725465
+"Better Already" "Grenade Launcher Scavenger" 2
+"Better Already" "Sniper Rifle Reserves" 2
+"Insulation" "Grenade Launcher Scavenger" 3
+"Insulation" "Sniper Rifle Reserves" 2
 
-hunter Hunter Cloak "Tangled Web Cloak" light:=649 items:4 hasMod:false 6917529084969089363
+hunter Hunter Cloak "Prodigal Cloak" light:=624 items:11 hasMod:false 6917529085594198822
+"Better Already" "Shotgun Reserves" 5
+"Innervation" "Shotgun Reserves" 2
+
+hunter Hunter Cloak "Cloak of Five Full Moons" light:=626 items:4 hasMod:false 6917529084904942237
+"Better Already" "Shotgun Reserves" 5
+"Better Already" "Linear Fusion Rifle Reserves" 2
+"Recuperation" "Shotgun Reserves" 3
+"Recuperation" "Linear Fusion Rifle Reserves" 4
+
+hunter Hunter Cloak "Tangled Web Cloak" light:=650 items:5 hasMod:false 6917529085609094569
+"Better Already" "Shotgun Reserves" 5
+"Better Already" "Linear Fusion Rifle Reserves" 2
+"Innervation" "Shotgun Reserves" 2
+"Innervation" "Linear Fusion Rifle Reserves" 3
+
+hunter Hunter Cloak "Wing Contender" light:=650 items:3 hasMod:false 6917529085603530525
+"Better Already" "Submachine Gun Scavenger" 2
+"Better Already" "Shotgun Scavenger" 4
+"Recuperation" "Submachine Gun Scavenger" 3
 "Recuperation" "Shotgun Scavenger" 2
-"Recuperation" "Rocket Launcher Reserves" 2
-
-hunter Hunter Cloak "Prodigal Cloak" light:=595 items:8 hasMod:false 6917529084257707395
-"Recuperation" "Rocket Launcher Reserves" 2
-"Innervation" "Rocket Launcher Reserves" 3
-
-hunter Hunter Cloak "Wing Contender" light:=625 items:4 hasMod:false 6917529084878131866
-"Better Already" "Machine Gun Reserves" 3
-"Better Already" "Sniper Rifle Scavenger" 2

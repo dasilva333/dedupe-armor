@@ -23,7 +23,7 @@ var unwantedPerks = [
 
 // RL/LF/Sword Perk + non-matching RL/LF/Sword Perk
 // real example: LF loader + sword scavener
-var uniqueWeaponSlots = ["Sword", "Rocket", "Linear"];
+var uniqueWeaponSlots = ["Sword", "Rocket", "Linear", "Machine"];
 
 var genericTypeNames = {
     "Kinetic Weapon": ["Scout Rifle", "Auto Rifle", "Hand Cannon", "Pulse Rifle", "Sniper Rifle", "Shotgun", "Bow", "Submachine Gun", "Sidearm", "Grenade Launcher"],
@@ -353,6 +353,6 @@ _.each(armorTypes, function (armorType) {
 });
 
 //console.log(dupeReport);
-console.log("\ntotal junk items:", dupeReport.length);
-fs.writeFileSync("object.txt", JSON.stringify(dupeReport, null, 4));
-fs.writeFileSync("report.txt", dupeReport.join(""));
+var totalCount = "\ntotal junk items:" + dupeReport.length;
+console.log(totalCount);
+fs.writeFileSync("report.txt", totalCount + dupeReport.join(""));
