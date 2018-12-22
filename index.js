@@ -178,7 +178,7 @@ _.each(armorTypes, function (armorType) {
             var stdPerks = _.filter(values, {
                 label: "Armor Perks"
             });
-            return stdPerks.length > 0 && stdPerks[0].value.length == 4;
+            return stdPerks.length > 0 && (stdPerks[0].value.length == 4 || stdPerks[0].value.length == 5);
         });
 
         _.each(regArmorItems, function (values) {
@@ -318,6 +318,8 @@ _.each(armorTypes, function (armorType) {
                     }*/
                     var dupeText = [result.join(" ")];
                     //has possible combos that can be made by other items
+                    var isSafeToShard = false;
+                    var advArmorCount = 0;
                     if (wantedCombos.length > 0) {
                         _.each(wantedCombos, function (wantedCombo) {
                             var comboCount = _.filter(armorItems, function (values) {
@@ -329,22 +331,49 @@ _.each(armorTypes, function (armorType) {
                                 });
                                 return combos.length > 0;
                             });
+                            //if the combo is found in other 5perk gear it's safe to delete
+                            var comboCountw5Perks = _.filter(armorItems, function (values) {
+
+                                var armorCombos = _.find(values, {
+                                    label: "Armor Combinations"
+                                }).value;
+
+                                var combos = _.filter(armorCombos, function (otherCombos) {
+                                    return _.intersection(otherCombos, wantedCombo).length == 2;
+                                });
+
+                                return combos.length > 0 && armorCombos.length == 6;
+                            });
+
                             /*if (id == "6917529084875220621"){
                                 if ( wantedCombo[0] == "Recuperation" && wantedCombo[1] == "Submachine Gun Reserves"){
                                     console.log("wantedCombo", wantedCombo, comboCount);
                                 }
                                 
                             }*/
-
-                            dupeText.push('"' + wantedCombo.join('" "') + '" ' + comboCount.length);
+                            if ( combos.length == 4 ){
+                                isSafeToShard = true;
+                                dupeText.push('"' + wantedCombo.join('" "') + '" ' + comboCount.length);                                
+                            } else if ( combos.length == 6 ){
+                                if ( comboCountw5Perks.length > 1 ){
+                                    advArmorCount++;
+                                    dupeText.push('"' + wantedCombo.join('" "') + '" ' + comboCount.length + '/' + comboCountw5Perks.length);                                
+                                }
+                            }                            
                         });
                         //has no desired combos      
                     } else {
+                        isSafeToShard = true;
                         dupeText.push("No Desired Combos Available");
+                    }
+                    if ( advArmorCount == wantedCombos.length && combos.length == 6 ){
+                        isSafeToShard = true;
                     }
                     dupeText = "\n\n" + dupeText.join("\n");
                     //console.log(dupeText);
-                    dupeReport.push(dupeText);
+                    if ( isSafeToShard ){
+                        dupeReport.push(dupeText);
+                    }                    
                 }
 
             }
