@@ -7,43 +7,13 @@ var armorData = fs.readFileSync(targetFile).toString("utf8");
 armorData = armorData.split("\n");
 weaponsHeader = armorData.shift().split(",");
 var filteredPerks = ["Armor", "Mod", "Curse"];
-var unwantedPerks = [
-    //these archetypes have plenty of ammo so very rare to need to scavenge/reserve it
-    "Auto Rifle Scavenger", "Pulse Rifle Scavenger", "Scout Rifle Scavenger",
-    "Auto Rifle Reserves", "Pulse Rifle Reserves", "Scout Rifle Reserves",
-    //I rarely do melee so remove those perks
-    "Impact Induction", "Light Reactor", "Invigoration", //"Hands-On",
-    //Bow doesn't need reload speed improvements, plenty of ammo so no need to buff that either
-    "Bow Reloader", "Bow Reserves", "Arrow Scavenger",
-    //who needs to really aim these anyway?
-    "Unflinching Grenade Launcher Aim", "Unflinching Power Aim",
-    //Primary Ammo is already plentiful and if we're going to make a spec something that affects all Power weapons is meh
-    "Primary Ammo Finder", "Unflinching Power Aim", "Power Dexterity"
-];
+var presets = require("./config");
 
-// RL/LF/Sword Perk + non-matching RL/LF/Sword Perk
-// real example: LF loader + sword scavener
-var uniqueWeaponSlots = ["Sword", "Rocket", "Linear", "Machine"];
+//console.log("presets", presets);
 
-var genericTypeNames = {
-    "Kinetic Weapon": ["Scout Rifle", "Auto Rifle", "Hand Cannon", "Pulse Rifle", "Sniper Rifle", "Shotgun", "Bow", "Submachine Gun", "Sidearm", "Grenade Launcher"],
-    "Energy Weapon": ["Scout Rifle", "Auto Rifle", "Hand Cannon", "Pulse Rifle", "Sniper Rifle", "Shotgun", "Bow", "Submachine Gun", "Sidearm", "Grenade Launcher", "Fusion Rifle"],
-    "Power Weapon": ["Rocket Launcher", "Grenade Launcher", "Linear Fusion Rifle", "Sword", "Machine Gun", "Shotgun", "Sniper Rifle"],
-    "Rifle": ["Scout Rifle", "Auto Rifle", "Pulse Rifle", "Sniper Rifle", "Linear Fusion Rifle"],
-    "Oversize Weapon": ["Rocket Launcher", "Grenade Launcher", "Shotgun", "Bow"],
-    "Large Weapon": ["Rocket Launcher", "Grenade Launcher", "Shotgun"],
-    "Light Arms": ["Hand Cannon", "Submachine Gun", "Sidearm"],
-    "Scatter Projectile": ["Auto Rifle", "Submachine Gun", "Pulse Rifle", "Sidearm", "Fusion Rifle"],
-    "Precision Weapon": ["Hand Cannon", "Scout Rifle", "Trace Rifle", "Bow", "Linear Fusion Rifle", "Sniper", "Shotgun"]
-};
+var genericFullNames = _.zipObject(_.map(_.keys(presets.genericTypeNames), function(keyName){ return keyName.split(" ")[0]; }), _.keys(presets.genericTypeNames)); 
 
-var unwantedPerkPairs = [
-    ["Power Weapon Loader", "Sword Scavenger"]
-];
-
-var genericFullNames = _.zipObject(_.map(_.keys(genericTypeNames), function(keyName){ return keyName.split(" ")[0]; }), _.keys(genericTypeNames)); 
-
-var genericTagNames = _.map(_.keys(genericTypeNames), function(keyName){ return keyName.split(" ")[0]; });
+var genericTagNames = _.map(_.keys(presets.genericTypeNames), function(keyName){ return keyName.split(" ")[0]; });
 
 armorData = armorData.map(function (row) {
     var values = row.split(",");
@@ -178,7 +148,7 @@ _.each(armorTypes, function (armorType) {
         //console.log("enhancedArmorItems", armorType, unwantedPerksBcEnhanced);
 
         //join the array of unwanted perks and unwanted bc enhanced
-        unwantedCombos = _.map(unwantedPerkPairs, function(combo){
+        unwantedCombos = _.map(presets.unwantedPerkPairs, function(combo){
             return combo.join(",");
         }).concat(unwantedPerksBcEnhanced);
 
@@ -205,13 +175,13 @@ _.each(armorTypes, function (armorType) {
                 //console.log("unwantedPerks", unwantedPerks);
                 var fcPerkTag = combo[0].split(" ")[0];
                 var scWeapon = combo[1].split(" ")[0];
-                if (uniqueWeaponSlots.indexOf(fcPerkTag) > -1 && uniqueWeaponSlots.indexOf(scWeapon) > -1 &&
-                    uniqueWeaponSlots.indexOf(fcPerkTag) != uniqueWeaponSlots.indexOf(scWeapon)) {
+                if (presets.uniqueWeaponSlots.indexOf(fcPerkTag) > -1 && presets.uniqueWeaponSlots.indexOf(scWeapon) > -1 &&
+                presets.uniqueWeaponSlots.indexOf(fcPerkTag) != presets.uniqueWeaponSlots.indexOf(scWeapon)) {
                     //console.log("combo", combo, id);
                     return false;
                 } else if ( genericTagNames.indexOf(fcPerkTag) > -1 ){
                     var fullGenericName = genericFullNames[fcPerkTag];                    
-                    var specificCombos = genericTypeNames[fullGenericName];
+                    var specificCombos = presets.genericTypeNames[fullGenericName];
                     var specificComboCounts = _.map(specificCombos, function(specificGunName){
                         var fcPerkName = specificGunName + combo[0].replace(fullGenericName, "").replace(fcPerkTag, "");
                         var wantedCombo = [fcPerkName, combo[1]];
@@ -269,7 +239,7 @@ _.each(armorTypes, function (armorType) {
                         if ( stdPerks.length ){
                             stdPerks = stdPerks[0].value;
                             //console.log("x", combo[0], stdPerks, stdPerks.indexOf(combo[0]) > -1)
-                            return stdPerks.length > 0 && stdPerks.indexOf(combo[0]) > -1 && unwantedPerks.indexOf(combo[0]) == -1;
+                            return stdPerks.length > 0 && stdPerks.indexOf(combo[0]) > -1 && presets.unwantedPerks.indexOf(combo[0]) == -1;
                         } else {
                             return false;
                         }                        
@@ -282,7 +252,7 @@ _.each(armorTypes, function (armorType) {
                         if ( stdPerks.length ){
                             stdPerks = stdPerks[0].value;
                             //console.log("x", combo[0], stdPerks, stdPerks.indexOf(combo[0]) > -1)
-                            return stdPerks.length > 0 && stdPerks.indexOf(combo[1]) > -1 && unwantedPerks.indexOf(combo[1]) == -1;
+                            return stdPerks.length > 0 && stdPerks.indexOf(combo[1]) > -1 && presets.unwantedPerks.indexOf(combo[1]) == -1;
                         } else {
                             return false;
                         }                        
@@ -295,7 +265,7 @@ _.each(armorTypes, function (armorType) {
                 //}
 
                 //if the intersection between combo and unWantedPerks is zero that means it has none of the unwanted perks
-                return _.intersection(combo, unwantedPerks).length == 0;
+                return _.intersection(combo, presets.unwantedPerks).length == 0;
             });
 
             /*if ( id == "6917529086013942993" ){
