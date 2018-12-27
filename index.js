@@ -157,7 +157,7 @@ _.each(armorTypes, function (armorType) {
             var stdPerks = _.filter(values, {
                 label: "Armor Perks"
             });
-            return stdPerks.length > 0 && (stdPerks[0].value.length == 4 || stdPerks[0].value.length == 5);
+            return stdPerks.length > 0; //&& (stdPerks[0].value.length == 4 || stdPerks[0].value.length == 5);
         });
 
         _.each(regArmorItems, function (values) {
