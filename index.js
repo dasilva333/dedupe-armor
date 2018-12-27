@@ -169,6 +169,18 @@ _.each(armorTypes, function (armorType) {
                 label: "Id"
             }).value;
 
+            var tag = _.find(values, {
+                label: "Tag"
+            }).value;
+
+            //avoid suggestion dismantle of items marked keep or favorite
+            if ( tag == "favorite" || tag == "keep"){
+                return;
+            }
+            /*if (id == "6917529069300791933"){
+                console.log("item", values);
+            }*/
+
             //filter combos to the combos that are wanted
             var wantedCombos = _.filter(combos, function (combo) {
                 //console.log("combos", combos, _.intersection(combos, unwantedPerks).length );
