@@ -15,6 +15,8 @@ var genericFullNames = _.zipObject(_.map(_.keys(presets.genericTypeNames), funct
 
 var genericTagNames = _.map(_.keys(presets.genericTypeNames), function(keyName){ return keyName.split(" ")[0]; });
 
+var genericFastNames = _.keys(presets.genericFastTypeNames);
+
 armorData = armorData.map(function (row) {
     var values = row.split(",");
     var results = values.map(function (value, index) {
@@ -144,13 +146,51 @@ _.each(armorTypes, function (armorType) {
             });
             //return memo;
         }, []);
-        unwantedPerksBcEnhanced = _.map(unwantedPerksBcEnhanced /*, function(a){ return a.split(","); }*/ );
+        //
+        unwantedPerksBcEnhanced = _.map(unwantedPerksBcEnhanced);
         //console.log("enhancedArmorItems", armorType, unwantedPerksBcEnhanced);
+
+        // there is 3 generic versions that are equal gain as the specific version
+        // https://www.reddit.com/r/DestinyTheGame/comments/9oc1ki/massive_breakdown_of_gauntlet_reload_speed_perks/
+        var unwantedBcGenericFastPairs = {};
+        _.each(armorItems, function (values) {
+            var combos = _.find(values, {
+                label: "Armor Combinations"
+            }).value;
+            var armorType =_.find(values, {
+                label: "Type"
+            }).value;
+            _.each(combos, function (combo) {
+                //generic fast perks only exist in the first column
+                var fcPerkName = combo[0];
+                //manipulate the string in this way so I can check for the beginning of the string and avoid catch {{Other}} Rifle parks
+                if ( armorType == "Chest" ){
+                    fcPerkName = fcPerkName.replace("Unflinching ", "");
+                }
+                _.each(genericFastNames, function(genericFastName){
+                    //this check ensures it's only in the beginning (first character) of the perk name
+                    if ( fcPerkName.indexOf(genericFastName) == 0 ){
+                        var affectedWeapons = presets.genericFastTypeNames[genericFastName];
+                        _.each(affectedWeapons, function(weaponName){
+                            //return an array of perks that aren't needed bc the equivalent is found
+                            var fcPerkName = combo[0].replace(genericFastName, weaponName);
+                            var keyName = [ fcPerkName, combo[1] ].join(",");
+                            unwantedBcGenericFastPairs[keyName] = keyName;
+                        });
+                        //console.log("combo", combo);
+                        //unwantedBcGenericFastPairs[keyName] = keyName;
+                    }
+                });
+            });
+            //return memo;
+        }, []);
+        unwantedBcGenericFastPairs = _.map(unwantedBcGenericFastPairs);
+        //console.log("unwantedBcGenericFastPairs", armorType, unwantedBcGenericFastPairs);
 
         //join the array of unwanted perks and unwanted bc enhanced
         unwantedCombos = _.map(presets.unwantedPerkPairs, function(combo){
             return combo.join(",");
-        }).concat(unwantedPerksBcEnhanced);
+        }).concat(unwantedPerksBcEnhanced).concat(unwantedBcGenericFastPairs);
 
         //only consider deleting regular armor items which are those with 4 perks (2 columns of 2)
         var regArmorItems = _.filter(armorItems, function (values) {
