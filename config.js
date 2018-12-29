@@ -22,10 +22,14 @@ module.exports = {
     uniqueWeaponSlots: ["Sword", "Rocket", "Linear", "Machine"],
 
     // if you have the generic type you don't need the specific type (these generic are the same speed as the specific)
-    genericFastTypeNames: {
-        'Rifle': ['Scout Rifle', 'Auto Rifle', 'Pulse Rifle', 'Sniper Rifle', 'Linear Fusion Rifle'],
-        'Large Weapon': ['Rocket Launcher', 'Grenade Launcher', 'Shotgun'],
-        'Light Arms': ['Hand Cannon', 'Submachine Gun', 'Sidearm']
+    genericFastTypeNames: {        
+        //this applies to gauntlets
+        'Large Weapon': ['Rocket Launcher', 'Grenade Launcher', 'Shotgun', "Machine Gun"],
+        //this applies to chests
+        'Large Arms': ['Rocket Launcher', 'Grenade Launcher', 'Shotgun', "Machine Gun"],
+        //these apply to both gauntlets and chests
+        'Light Arms': ['Hand Cannon', 'Submachine Gun', 'Sidearm'],
+        'Rifle': ['Scout Rifle', 'Auto Rifle', 'Pulse Rifle', 'Sniper Rifle', 'Linear Fusion Rifle']
     },
     //if you have all the specific types you don't need the generic type
     genericTypeNames: {

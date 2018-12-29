@@ -164,7 +164,7 @@ _.each(armorTypes, function (armorType) {
                 //generic fast perks only exist in the first column
                 var fcPerkName = combo[0];
                 //manipulate the string in this way so I can check for the beginning of the string and avoid catch {{Other}} Rifle parks
-                if ( armorType == "Chest" ){
+                if ( armorType == "Chest Armor" ){
                     fcPerkName = fcPerkName.replace("Unflinching ", "");
                 }
                 _.each(genericFastNames, function(genericFastName){
@@ -173,8 +173,11 @@ _.each(armorTypes, function (armorType) {
                         var affectedWeapons = presets.genericFastTypeNames[genericFastName];
                         _.each(affectedWeapons, function(weaponName){
                             //return an array of perks that aren't needed bc the equivalent is found
-                            var fcPerkName = combo[0].replace(genericFastName, weaponName);
-                            var keyName = [ fcPerkName, combo[1] ].join(",");
+                            var fcPerkNameEquiv = combo[0].replace(genericFastName, weaponName);
+                            if (armorType=="Chest Armor" && genericFastName == "Large Arms"){
+                                fcPerkNameEquiv = fcPerkNameEquiv + " Aim";
+                            }
+                            var keyName = [ fcPerkNameEquiv, combo[1] ].join(",");
                             unwantedBcGenericFastPairs[keyName] = keyName;
                         });
                         //console.log("combo", combo);
@@ -185,7 +188,10 @@ _.each(armorTypes, function (armorType) {
             //return memo;
         }, []);
         unwantedBcGenericFastPairs = _.map(unwantedBcGenericFastPairs);
-        //console.log("unwantedBcGenericFastPairs", armorType, unwantedBcGenericFastPairs);
+        /*if (armorType == "Chest Armor"){
+            console.log("unwantedBcGenericFastPairs", armorType, unwantedBcGenericFastPairs);
+        }*/
+        
 
         //join the array of unwanted perks and unwanted bc enhanced
         unwantedCombos = _.map(presets.unwantedPerkPairs, function(combo){
@@ -320,9 +326,9 @@ _.each(armorTypes, function (armorType) {
                 return _.intersection(combo, presets.unwantedPerks).length == 0;
             });
 
-            /*if ( id == "6917529086013942993" ){
+            if ( id == "6917529083428339602" ){
                 console.log("wantedCombos", wantedCombos);
-            }*/
+            }
 
             // the armor piece might have just one desired combo
             // if the length of armor pieces that fit each combo then it's a dupe
