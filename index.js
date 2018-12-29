@@ -126,24 +126,29 @@ _.each(armorTypes, function (armorType) {
             var combos = _.find(values, {
                 label: "Armor Combinations"
             }).value;
-            _.each(combos, function (combo) {
-                var isEnhancedCombo = combo.join(" ").indexOf("Enhanced") > -1;
-                if (isEnhancedCombo) {
-                    var normalCombo = _.clone(combo);
-                    //enhanced combos only affect the first column
-                    normalCombo[0] = normalCombo[0].replace("Enhanced ", "");
-                    var keyName = normalCombo.join(",");
-                    //memo.push([normalCombo, combo]);
-                    /*var inter = _.intersection(memo, normalCombo);
-                    if ( normalCombo[0] == "Shotgun Dexterity" && normalCombo[1] == "Pulse Rifle Scavenger" ){
-                        console.log("A", inter);
+            var otherTier = _.find(values, {
+                label: "Tier"
+            }).value;
+            if ( otherTier == "Legendary"){
+                _.each(combos, function (combo) {
+                    var isEnhancedCombo = combo.join(" ").indexOf("Enhanced") > -1;
+                    if (isEnhancedCombo) {
+                        var normalCombo = _.clone(combo);
+                        //enhanced combos only affect the first column
+                        normalCombo[0] = normalCombo[0].replace("Enhanced ", "");
+                        var keyName = normalCombo.join(",");
+                        //memo.push([normalCombo, combo]);
+                        /*var inter = _.intersection(memo, normalCombo);
+                        if ( normalCombo[0] == "Shotgun Dexterity" && normalCombo[1] == "Pulse Rifle Scavenger" ){
+                            console.log("A", inter);
+                        }
+                        if ( inter.length == 0 ){
+                            memo.push(normalCombo);    
+                        }      */
+                        unwantedPerksBcEnhanced[keyName] = keyName;
                     }
-                    if ( inter.length == 0 ){
-                        memo.push(normalCombo);    
-                    }      */
-                    unwantedPerksBcEnhanced[keyName] = keyName;
-                }
-            });
+                });
+            }            
             //return memo;
         }, []);
         //
@@ -153,6 +158,7 @@ _.each(armorTypes, function (armorType) {
         // there is 3 generic versions that are equal gain as the specific version
         // https://www.reddit.com/r/DestinyTheGame/comments/9oc1ki/massive_breakdown_of_gauntlet_reload_speed_perks/
         var unwantedBcGenericFastPairs = {};
+        var unwantedBcGenericFastPairsMap = {};
         _.each(armorItems, function (values) {
             var combos = _.find(values, {
                 label: "Armor Combinations"
@@ -177,8 +183,8 @@ _.each(armorTypes, function (armorType) {
                             if (armorType=="Chest Armor" && genericFastName == "Large Arms"){
                                 fcPerkNameEquiv = fcPerkNameEquiv + " Aim";
                             }
-                            var keyName = [ fcPerkNameEquiv, combo[1] ].join(",");
-                            unwantedBcGenericFastPairs[keyName] = keyName;
+                            var equivalentCombo = [ fcPerkNameEquiv, combo[1] ].join(",");
+                            unwantedBcGenericFastPairs[equivalentCombo] = combo;
                         });
                         //console.log("combo", combo);
                         //unwantedBcGenericFastPairs[keyName] = keyName;
@@ -187,10 +193,11 @@ _.each(armorTypes, function (armorType) {
             });
             //return memo;
         }, []);
+        unwantedBcGenericFastPairsMap = unwantedBcGenericFastPairs;
         unwantedBcGenericFastPairs = _.map(unwantedBcGenericFastPairs);
-        /*if (armorType == "Chest Armor"){
-            console.log("unwantedBcGenericFastPairs", armorType, unwantedBcGenericFastPairs);
-        }*/
+        if (armorType == "Helmet"){
+            console.log("unwantedBcGenericFastPairs", unwantedBcGenericFastPairsMap);
+        }
         
 
         //join the array of unwanted perks and unwanted bc enhanced

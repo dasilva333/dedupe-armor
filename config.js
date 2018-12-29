@@ -47,7 +47,7 @@ module.exports = {
             'Bow',
             'Linear Fusion Rifle',
             'Sniper',
-            'Shotgun'
+            //'Shotgun' applies to Slug Shotguns but that's only the Chaperone so Shotgun Targeting is still needed
         ]
     },
     //if you have for example: Light Arms/Large Weapon/Rifle Loader + Special Ammo Finder you don't need Kinetic Weapon Loader + Special Ammo Finder
