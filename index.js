@@ -279,6 +279,45 @@ _.each(armorTypes, function (armorType) {
                     }
                 }
 
+                var fcPerkCount = _.filter(armorItems, function(otherValues){
+                    var stdPerks = _.filter(otherValues, {
+                        label: "Armor Perks"
+                    });
+                    var otherTier = _.find(otherValues, {
+                        label: "Tier"
+                    }).value;
+                    if ( stdPerks.length && otherTier == "Legendary" ){
+                        stdPerks = stdPerks[0].value;
+                        //console.log("x", combo[0], stdPerks, stdPerks.indexOf(combo[0]) > -1)
+                        return stdPerks.length > 0 && stdPerks.indexOf(combo[0]) > -1 && presets.unwantedPerks.indexOf(combo[0]) == -1;
+                    } else {
+                        return false;
+                    }                        
+                }).length;
+                var scPerkCount = _.filter(armorItems, function(otherValues){
+                    var stdPerks = _.filter(otherValues, {
+                        label: "Armor Perks"
+                    });
+                    var otherTier = _.find(otherValues, {
+                        label: "Tier"
+                    }).value;
+                    if ( stdPerks.length && otherTier == "Legendary" ){
+                        stdPerks = stdPerks[0].value;
+                        //console.log("x", combo[0], stdPerks, stdPerks.indexOf(combo[0]) > -1)
+                        return stdPerks.length > 0 && stdPerks.indexOf(combo[1]) > -1 && presets.unwantedPerks.indexOf(combo[1]) == -1;
+                    } else {
+                        return false;
+                    }                        
+                }).length;
+                /*if ( id == "6917529086013942993" ){
+                    console.log("combo", combo, fcPerkCount, scPerkCount);
+                }*/
+                
+                //if the perk is unique and not found in any other piece of armor don't delete it
+                if ( fcPerkCount == 1 || scPerkCount == 1 ){
+                    return true;
+                }
+
                 //if the combo is found in the array of existing unwanted perks i don't want it
                 var matchesUnwanted = unwantedCombos.indexOf(combo.join(",")) > -1;
                /* if ( id == "6917529085950983244" && combo[0] == "Hand Cannon Dexterity" && combo[1] == "Sidearm Scavenger" ){
@@ -288,47 +327,13 @@ _.each(armorTypes, function (armorType) {
                     return false;
                 }
 
-                //if ( id == "6917529086013942993" ){
-                    var fcPerkCount = _.filter(armorItems, function(otherValues){
-                        var stdPerks = _.filter(otherValues, {
-                            label: "Armor Perks"
-                        });
-                        
-                        if ( stdPerks.length ){
-                            stdPerks = stdPerks[0].value;
-                            //console.log("x", combo[0], stdPerks, stdPerks.indexOf(combo[0]) > -1)
-                            return stdPerks.length > 0 && stdPerks.indexOf(combo[0]) > -1 && presets.unwantedPerks.indexOf(combo[0]) == -1;
-                        } else {
-                            return false;
-                        }                        
-                    }).length;
-                    var scPerkCount = _.filter(armorItems, function(otherValues){
-                        var stdPerks = _.filter(otherValues, {
-                            label: "Armor Perks"
-                        });
-                        
-                        if ( stdPerks.length ){
-                            stdPerks = stdPerks[0].value;
-                            //console.log("x", combo[0], stdPerks, stdPerks.indexOf(combo[0]) > -1)
-                            return stdPerks.length > 0 && stdPerks.indexOf(combo[1]) > -1 && presets.unwantedPerks.indexOf(combo[1]) == -1;
-                        } else {
-                            return false;
-                        }                        
-                    }).length;
-                    //console.log("combo", combo, fcPerkCount, scPerkCount);
-                    //if the perk is unique and not found in any other piece of armor don't delete it
-                    if ( fcPerkCount == 1 || scPerkCount == 1 ){
-                        return true;
-                    }
-                //}
-
                 //if the intersection between combo and unWantedPerks is zero that means it has none of the unwanted perks
                 return _.intersection(combo, presets.unwantedPerks).length == 0;
             });
 
-            if ( id == "6917529083428339602" ){
+            /*if ( id == "6917529086013942993" ){
                 console.log("wantedCombos", wantedCombos);
-            }
+            }*/
 
             // the armor piece might have just one desired combo
             // if the length of armor pieces that fit each combo then it's a dupe
