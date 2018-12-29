@@ -11,9 +11,9 @@ var presets = require("./config");
 
 //console.log("presets", presets);
 
-var genericFullNames = _.zipObject(_.map(_.keys(presets.genericTypeNames), function(keyName){ return keyName.split(" ")[0]; }), _.keys(presets.genericTypeNames)); 
+/*var genericFullNames = _.zipObject(_.map(_.keys(presets.genericTypeNames), function(keyName){ return keyName.split(" ")[0]; }), _.keys(presets.genericTypeNames)); 
 
-var genericTagNames = _.map(_.keys(presets.genericTypeNames), function(keyName){ return keyName.split(" ")[0]; });
+var genericTagNames = _.map(_.keys(presets.genericTypeNames), function(keyName){ return keyName.split(" ")[0]; });*/
 
 var genericFastNames = _.keys(presets.genericFastTypeNames);
 
@@ -228,6 +228,8 @@ _.each(armorTypes, function (armorType) {
             }*/
 
             //filter combos to the combos that are wanted
+            var comboReasons = [];
+
             var wantedCombos = _.filter(combos, function (combo) {
                 //console.log("combos", combos, _.intersection(combos, unwantedPerks).length );
                 //console.log("unwantedPerks", unwantedPerks);
@@ -236,47 +238,8 @@ _.each(armorTypes, function (armorType) {
                 if (presets.uniqueWeaponSlots.indexOf(fcPerkTag) > -1 && presets.uniqueWeaponSlots.indexOf(scWeapon) > -1 &&
                 presets.uniqueWeaponSlots.indexOf(fcPerkTag) != presets.uniqueWeaponSlots.indexOf(scWeapon)) {
                     //console.log("combo", combo, id);
+                    comboReasons.push("Impossible Pair");
                     return false;
-                } else if ( genericTagNames.indexOf(fcPerkTag) > -1 ){
-                    var fullGenericName = genericFullNames[fcPerkTag];                    
-                    var specificCombos = presets.genericTypeNames[fullGenericName];
-                    var specificComboCounts = _.map(specificCombos, function(specificGunName){
-                        var fcPerkName = specificGunName + combo[0].replace(fullGenericName, "").replace(fcPerkTag, "");
-                        var wantedCombo = [fcPerkName, combo[1]];
-                        var otherArmor = _.filter(armorItems, function (otherValues) {
-                            var otherId = _.find(otherValues, {
-                                label: "Id"
-                            }).value;
-                            var otherTier = _.find(otherValues, {
-                                label: "Tier"
-                            }).value;
-                            var hasMatchingParks = false;
-                            if (otherId != id && otherTier == "Legendary") {
-                                var otherCombos = _.find(otherValues, {
-                                    label: "Armor Combinations"
-                                }).value;
-                                //loop through the other combos and see if it has a combination that matches wanted combo
-                                hasMatchingParks = _.filter(otherCombos, function (otherCombo) {
-                                    return _.intersection(wantedCombo, otherCombo).length == 2 || _.intersection(["Enhanced " + wantedCombo[0], wantedCombo[1]], otherCombo).length == 2; //has both perks in the wantedCombo
-                                }).length > 0;
-        
-                                /*if ( id == "6917529068982983584" && wantedCombo.indexOf("Shotgun Reserves") > -1 && wantedCombo.indexOf("Scout Rifle Targeting") > -1 ){
-                                    console.log("\n1.hasMatchingParks: ", hasMatchingParks, "\n\n2.wantedCombo", wantedCombo, "\n\n3.otherCombos", otherCombos, "\n");
-                                }
-                                hasMatchingParks = false;*/
-                            }
-                            return hasMatchingParks;
-                        });
-                        
-                        //console.log("searching for combo", wantedCombo, otherArmor.length);
-                        return otherArmor.length;
-                    });
-                    //console.log("generic combo", combo, specificComboCounts);
-                    //if there is no item with a zero then all specific slots that can fill the generic are available
-                    if ( specificComboCounts.indexOf(0) == -1 ){
-                        //console.log("generic combo-2", combo, specificComboCounts);
-                        return false;
-                    }
                 }
 
                 var fcPerkCount = _.filter(armorItems, function(otherValues){
@@ -315,20 +278,33 @@ _.each(armorTypes, function (armorType) {
                 
                 //if the perk is unique and not found in any other piece of armor don't delete it
                 if ( fcPerkCount == 1 || scPerkCount == 1 ){
+                    comboReasons.push("Unique Perk");
                     return true;
                 }
 
                 //if the combo is found in the array of existing unwanted perks i don't want it
-                var matchesUnwanted = unwantedCombos.indexOf(combo.join(",")) > -1;
+                var comboString = combo.join(",");
                /* if ( id == "6917529085950983244" && combo[0] == "Hand Cannon Dexterity" && combo[1] == "Sidearm Scavenger" ){
                     console.log("matchesUnwanted", combo, matchesUnwanted, unwantedCombos);
                }*/
-                if (matchesUnwanted) {
+                if ( _.indexOf(unwantedBcGenericFastPairs, comboString) > -1 ){
+                    comboReasons.push("Generic Fast Pair");
+                    return false;
+                } else if ( _.indexOf(unwantedPerksBcEnhanced, comboString) > -1 ){
+                    comboReasons.push("Enhanced Pair");
+                    return false;
+                } else if ( _.indexOf(unwantedCombos, comboString) > -1 ){
+                    comboReasons.push("Unwanted Pair");
+                    return false;
+                } else if ( _.intersection(presets.unwantedPerks, combo).length > 0 ){
+                    comboReasons.push("Unwanted Perk");
                     return false;
                 }
 
                 //if the intersection between combo and unWantedPerks is zero that means it has none of the unwanted perks
-                return _.intersection(combo, presets.unwantedPerks).length == 0;
+                var hasWantedPerksOnly = _.intersection(combo, presets.unwantedPerks).length == 0;
+                comboReasons.push(hasWantedPerksOnly ? "Duplicate Pair" : "Unwanted Perk");
+                return hasWantedPerksOnly;
             });
 
             /*if ( id == "6917529086013942993" ){
@@ -397,15 +373,16 @@ _.each(armorTypes, function (armorType) {
                     var isSafeToShard = false;
                     var advArmorCount = 0;
                     if (wantedCombos.length > 0) {
-                        _.each(wantedCombos, function (wantedCombo) {
+                        _.each(combos, function (combo, index) {
+                            var isWantedCombo = _.indexOf(wantedCombos, combo) > -1;
                             var comboCount = _.filter(armorItems, function (values) {
 
                                 var combos = _.filter(_.find(values, {
                                     label: "Armor Combinations"
                                 }).value, function (otherCombos) {
-                                    return _.intersection(otherCombos, wantedCombo).length == 2;
+                                    return _.intersection(otherCombos, combo).length == 2;
                                 });
-                                return combos.length > 0;
+                                return combos.length > 0 && isWantedCombo;
                             });
                             //if the combo is found in other 5perk gear it's safe to delete
                             var comboCountw5Perks = _.filter(armorItems, function (values) {
@@ -415,32 +392,38 @@ _.each(armorTypes, function (armorType) {
                                 }).value;
 
                                 var combos = _.filter(armorCombos, function (otherCombos) {
-                                    return _.intersection(otherCombos, wantedCombo).length == 2;
+                                    return _.intersection(otherCombos, combo).length == 2;
                                 });
 
-                                return combos.length > 0 && armorCombos.length == 6;
+                                return combos.length > 0 && armorCombos.length == 6 && isWantedCombo;
                             });
 
-                            /*if (id == "6917529084875220621"){
-                                if ( wantedCombo[0] == "Recuperation" && wantedCombo[1] == "Submachine Gun Reserves"){
-                                    console.log("wantedCombo", wantedCombo, comboCount);
-                                }
-                                
-                            }*/
                             if ( combos.length == 4 ){
                                 isSafeToShard = true;
-                                dupeText.push('"' + wantedCombo.join('" "') + '" ' + comboCount.length);                                
+                                //var comboString = combo.join(",");
+                                var reason = comboReasons[index];            
+                                /*if ( id == "6917529085707103366" ){
+                                    console.log("combo", combo, isWantedCombo, wantedCombos);
+                                }*/
+                                dupeText.push('"' + combo.join('" "') + '" ' + comboCount.length + ' (reason:' + reason + ')');                                
                             } else if ( combos.length == 6 ){
-                                if ( comboCountw5Perks.length > 1 ){
+                                var reason = comboReasons[index];                 
+                                if ( comboCountw5Perks.length > 1 && isWantedCombo ){                                    
                                     advArmorCount++;
-                                    dupeText.push('"' + wantedCombo.join('" "') + '" ' + comboCount.length + '/' + comboCountw5Perks.length);                                
-                                }
+                                    reason = "Other 5PAs";
+                                }                                               
+                                dupeText.push('"' + combo.join('" "') + '" ' + comboCount.length + '/' + comboCountw5Perks.length + '" (reason: ' + reason + ')');
+                            
                             }                            
                         });
                         //has no desired combos      
                     } else {
                         isSafeToShard = true;
                         dupeText.push("No Desired Combos Available");
+                        _.each(combos, function(combo, index){
+                            var reason = comboReasons[index];
+                            dupeText.push('"' + combo.join('" "') + '" (reason: ' + reason + ')');
+                        });
                     }
                     if ( advArmorCount == wantedCombos.length && combos.length == 6 ){
                         isSafeToShard = true;
