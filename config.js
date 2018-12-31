@@ -23,14 +23,13 @@ module.exports = {
     uniqueWeaponSlots: ["Sword", "Rocket", "Linear", "Machine"],
 
     // if you have the generic type you don't need the specific type (these generic are the same speed as the specific)
-    genericFastTypeNames: {
+    genericsEqualToSpecifics: {
         // this applies to gauntlets, machine gun isn't specified but testing shows it has an improvement
-        'Large Weapon': ['Rocket Launcher', 'Grenade Launcher', 'Shotgun', "Machine Gun"],
-        // this applies to chests, machine gun isn't specified but testing shows it has an improvement
-        'Large Arms': ['Rocket Launcher', 'Grenade Launcher', 'Shotgun', "Machine Gun"],
+        'Large Weapon': ['Rocket Launcher', 'Grenade Launcher', 'Shotgun', "Machine Gun"],        
         // these apply to both gauntlets and chests
-        'Light Arms': ['Hand Cannon', 'Submachine Gun', 'Sidearm'],
-        'Rifle': ['Scout Rifle', 'Auto Rifle', 'Pulse Rifle', 'Sniper Rifle', 'Linear Fusion Rifle'],
+        'Light Arms': ['Hand Cannon', 'Submachine Gun', 'Sidearm', 'Bow'],
+        //these apply to gauntlets, chest and boots
+        'Rifle': ['Scout Rifle', 'Auto Rifle', 'Pulse Rifle', 'Sniper Rifle', 'Linear Fusion Rifle', 'Fusion Rifle'],
         // these apply to boots only
         'Oversize Weapon': ['Rocket Launcher', 'Grenade Launcher', 'Shotgun', 'Bow'],
         // these two apply to helmets only
@@ -74,20 +73,21 @@ module.exports = {
     },
     // these use the term 'slightly' which indicates it's less effective than the fast generic versions as well as the specific weapon version
     genericTypeNames: {
-        'Kinetic Weapon': [
-            'Bow',
+        // this applies to chests only
+        'Large Arms': ['Rocket Launcher', 'Grenade Launcher', 'Shotgun', "Machine Gun"],
+        'Kinetic Weapon': [            
             'Scout Rifle', // Rifle
             'Auto Rifle', // Rifle
             'Pulse Rifle', // Rifle
             'Sniper Rifle', // Rifle            
             'Shotgun', //Large Arms
             'Grenade Launcher', //Large Arms
+            'Bow', //Light Arms
             'Hand Cannon', // Light Arms
             'Submachine Gun', // Light Arms
             'Sidearm' // Light Arms
         ],
         'Energy Weapon': [
-            'Bow',
             'Scout Rifle', // Rifle
             'Auto Rifle', // Rifle
             'Pulse Rifle', // Rifle
@@ -95,6 +95,7 @@ module.exports = {
             'Fusion Rifle', // Rifle
             'Shotgun', // Large Arms
             'Grenade Launcher', // Large Arms
+            'Bow', //Light Arms
             'Hand Cannon', // Light Arms
             'Submachine Gun', // Light Arms
             'Sidearm' // Light Arms
