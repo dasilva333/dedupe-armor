@@ -10,6 +10,12 @@ const junkPerkPresets = require("./config.js");
 
 let _junkPerkMaps = null;
 
+/*
+    Terminology: 
+    4pa - 4-perk-armor: armor with 2 perks in the first column, 2 perks in the second column
+    5pa - 5-perk-armor: armor with 3 perks in the first column, 2 perks in the second column
+    combo: perk pair from first and second column traits
+*/
 function initJunkPerks() {
     if (_junkPerkMaps === null) {
         //console.log("initJunkPerks!");
@@ -198,24 +204,20 @@ function junkperk(item) {
             }
 
             /* Duplicate Perk */
-            const perkPairCount = _junkPerkMaps.perkPairCount[comboString];
+            const perkPairCount = _junkPerkMaps.perkPairCount[comboString];            
             /*if (item.id == "6917529086278883300") {
                 console.log("perkPairCount", perkPairCount, perkPairCount.fourPa > 2, perkPairCount.fivePa > 2);
             }*/
-            if (perkPairCount.fourPa >= 2 || perkPairCount.fivePa >= 1) {
-                // console.log("duplicate perk", comboString, perkPairCount);
-                if ( isFourPa ){
-                    comboReasons.push("Duplicate Pair " + perkPairCount.fourPa + "/" + perkPairCount.fivePa);
-                    return false;
-                } else {
-                    if ( perkPairCount.fivePa > 1 ){
-                        comboReasons.push("5PA Armor");
-                        return false;
-                    }
-                }                
-                
+            // if the item has a replacement 4pa piece it needs another 4pa or 5pa replacement to be considered a dupe
+            if ( isFourPa && (perkPairCount.fourPa >= 2 || perkPairCount.fivePa >= 1)  ){
+                comboReasons.push("Duplicate Pair " + perkPairCount.fourPa + "/" + perkPairCount.fivePa);
+                return false;
+            } 
+            //if the item is a 5pa then it can only be replaced by another 5pa armor piece
+            if ( !isFourPa && perkPairCount.fivePa >= 2 ){
+                comboReasons.push("Dupe In Other 5PA " + perkPairCount.fourPa + "/" + perkPairCount.fivePa);
+                return false;
             }
-
             /*if (comboString == "Unflinching Fusion Rifle Aim,Special Ammo Finder") {
                 console.log("test", perkPairCount)
             }*/
@@ -226,11 +228,8 @@ function junkperk(item) {
         /*if (item.id == "6917529086013942993") {
             console.log("wantedCombos", wantedCombos);
         }*/
-        /*
-            Reasons to keep the item:
-            - If it has 1 or more wanted combos
 
-        */
+        // if the item has no wanted combos then it can safely be dismantled
         if ( wantedCombos.length == 0 ){
             //console.log("unwantedItem", item.name, 'light:=' + item.Power, item.id, armorCombos, comboReasons);
             dupeReport.push([item.name, 'light:=' + item.Power, item.id, "Reason: No Wanted Combos"].join(" "));
