@@ -1,4 +1,5 @@
 module.exports = {
+    ignoreTags: [ "keep", "favorite" ],
     //unwanted individual single perks (any column)
     unwantedPerks: [
         //these archetypes have plenty of ammo so very rare to need to scavenge/reserve it

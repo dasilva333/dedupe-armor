@@ -137,14 +137,6 @@ _.each(armorTypes, function (armorType) {
                         //enhanced combos only affect the first column
                         normalCombo[0] = normalCombo[0].replace("Enhanced ", "");
                         var keyName = normalCombo.join(",");
-                        //memo.push([normalCombo, combo]);
-                        /*var inter = _.intersection(memo, normalCombo);
-                        if ( normalCombo[0] == "Shotgun Dexterity" && normalCombo[1] == "Pulse Rifle Scavenger" ){
-                            console.log("A", inter);
-                        }
-                        if ( inter.length == 0 ){
-                            memo.push(normalCombo);    
-                        }      */
                         unwantedPerksBcEnhanced[keyName] = keyName;
                     }
                 });
@@ -196,7 +188,7 @@ _.each(armorTypes, function (armorType) {
         unwantedBcGenericFastPairsMap = unwantedBcGenericFastPairs;
         unwantedBcGenericFastPairs = _.map(unwantedBcGenericFastPairs);
         if (armorType == "Helmet"){
-            console.log("unwantedBcGenericFastPairs", unwantedBcGenericFastPairsMap);
+            //console.log("unwantedBcGenericFastPairs", unwantedBcGenericFastPairsMap);
         }
         
 

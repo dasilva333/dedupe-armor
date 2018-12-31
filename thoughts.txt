@@ -1,0 +1,8 @@
+tables.
+
+1. preset unwanted perks - static - quick lookup - reason: Unwanted Perk
+2. preset unwanted pairs - static - quick lookup - reason: Unwanted Pair
+3. preset impossible heavy pairs - static - quick lookup - reason: Impossible Pair
+4. multi-tier perks - static - heavy lookup - reason: Generic Fast Pair or Enhanced Pair
+5. perk-pairs count - dynamic - quick lookup - reason: Other 5PA
+6. individual perks count - dynamic - quick lookup - reason: Unique Perk
