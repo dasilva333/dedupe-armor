@@ -7,7 +7,6 @@ const junkPerkPresets = require("./config.js");
     5pa - 5-perk-armor: armor with 3 perks in the first column, 2 perks in the second column
     combo: perk pair from first and second column traits
 */
-let dupeReport = [];
 let _junkPerkMaps = null;
 function initJunkPerks(stores) {
     if (_junkPerkMaps === null && stores.length > 0) {
@@ -134,13 +133,18 @@ function initJunkPerks(stores) {
         _junkPerkMaps.impossiblePerkPairs = _.map(_junkPerkMaps.impossiblePerkPairs);
 
         //console.log("armor items", _junkPerkMaps.itemTypeNameCounts);
+        const perkMapStats = _.zipObject(_.keys(_junkPerkMaps), _.map(_.keys(_junkPerkMaps), (keyName) => {
+            return _.keys(_junkPerkMaps[keyName]).length;
+        }));
+        console.log("_junkPerkMaps", perkMapStats);
     }
     return _junkPerkMaps;
 }
 
 //return false for opacity 0, return true for opacity 1, opacity 1 means dismantle
-function junkPerkFilter(item) {
-
+function junkPerkFilter(item, dupeReport) {
+    //console.log("dupeReport", dupeReport.length);
+    
     if (item.bucket.sort == "Armor" && item.tier === "Legendary") {
 
         //if the item is marked with the tags set to make it skip analyze
@@ -246,19 +250,21 @@ function junkPerkFilter(item) {
             return true;
         });
 
-        /*if (item.id == "6917529086013942993") {
-            console.log("wantedCombos", wantedCombos);
+        /*if (item.id == "6917529086431217491") {
+            console.log("wantedCombos", wantedCombos, comboReasons);
         }*/
 
         // if the item has no wanted combos then it can safely be dismantled
         if (wantedCombos.length == 0) {
+            let dupeText = [];
             //console.log("unwantedItem", item.name, 'light:=' + item.Power, item.id, armorCombos, comboReasons);
-            dupeReport.push([item.name, 'light:=' + item.basePower, item.id, "Reason: No Wanted Combos"].join(" "));
+            dupeText.push([item.name, 'light:=' + item.basePower, item.id, "Reason: No Wanted Combos"].join(" "));
             _.each(armorCombos, (combo, index) => {
                 var reason = comboReasons[index];
-                dupeReport.push('"' + combo.join('" "') + '" (reason: ' + reason + ')');
+                dupeText.push('"' + combo.join('" "') + '" (reason: ' + reason + ')');
             });
-            dupeReport.push("\n");
+            dupeText.push("");
+            dupeReport.push(dupeText.join("\n"))
             return true;
         }
 
@@ -271,6 +277,5 @@ function junkPerkFilter(item) {
 
 module.exports = {
     initJunkPerks: initJunkPerks,
-    junkPerkFilter: junkPerkFilter,
-    dupeReport: dupeReport
+    junkPerkFilter: junkPerkFilter
 };
