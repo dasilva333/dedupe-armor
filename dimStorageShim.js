@@ -83,9 +83,11 @@ var items = armorData.map(function (row) {
     item.Tag = item.tag;
     item.tier = item.Tier;
     item.basePower = item.Power;
+    item.classTypeName = item.Equippable;
     item.bucket = {
         //this can be hardcoded because it's always processing destinyArmor.csv
-        sort: "Armor"
+        sort: "Armor",
+        type: item.Type
     }
     return item;
 });

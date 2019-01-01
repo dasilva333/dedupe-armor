@@ -26,6 +26,9 @@ function initJunkPerks(stores) {
             unwantedPerkPairs: _.map(junkPerkPresets.unwantedPerkPairs, function (combo) {
                 return combo.join(",");
             }),
+            wantedPerkPairs: _.map(junkPerkPresets.wantedPerkPairs, function (combo) {
+                return combo.join(",");
+            }),
             armorCombos: {},
             armorPerks: {},
             impossiblePerkPairs: {},
@@ -158,7 +161,7 @@ function junkPerkFilter(item, dupeReport) {
 
         // Only Y1 Armor has no perks to make this array zero so mark it for dismantle
         if (!armorCombos || armorCombos && armorCombos.length === 0) {
-            dupeReport.push([item.name, 'light:=' + item.basePower, item.id, "Reason: No Armor Combos Available"].join(" "));
+            dupeReport.push([item.classTypeName, item.bucket.type, item.name, 'light:=' + item.basePower, item.id, "Reason: No Armor Combos Available"].join(" "));
             //console.log();
             return true;
         }
@@ -198,6 +201,26 @@ function junkPerkFilter(item, dupeReport) {
                 return true;
             }
 
+            /* Explicitly Wanted Pair desipte unwanted Perk */
+            const comboString = combo.join(",");
+            const wantedPair = _.indexOf(_junkPerkMaps.wantedPerkPairs, comboString) > -1;
+            if (wantedPair) {
+                //TODO fix this logic so it doesn't repeat further down
+                const perkPairCount = _junkPerkMaps.perkPairCount[comboString];
+                if (isFourPa && (perkPairCount.fourPa >= 2 || perkPairCount.fivePa >= 1)) {
+                    comboReasons.push("Duplicate Exp. Pair " + perkPairCount.fourPa + "/" + perkPairCount.fivePa);
+                    return false;
+                }
+                //if the item is a 5pa then it can only be replaced by another 5pa armor piece
+                if (!isFourPa && perkPairCount.fivePa >= 2) {
+                    comboReasons.push("Dupe Exp. Pair In Other 5PA " + perkPairCount.fourPa + "/" + perkPairCount.fivePa);
+                    return false;
+                }
+                //if the particular pair is wanted and it's not an existing dupe in other armor then return true to keep this unique perk pair
+                comboReasons.push("Explicit Wanted Perk Pair");
+                return true;
+            }
+
             /* Unwanted Perk */
             const unwantedPerk = _.intersection(junkPerkPresets.unwantedPerks, combo).length > 0;
             if (unwantedPerk) {
@@ -206,7 +229,6 @@ function junkPerkFilter(item, dupeReport) {
             }
 
             /* Unwanted Pair */
-            const comboString = combo.join(",");
             const unwantedPair = _.indexOf(_junkPerkMaps.unwantedPerkPairs, comboString) > -1;
             if (unwantedPair) {
                 comboReasons.push("Unwanted Perk Pair");
@@ -258,7 +280,7 @@ function junkPerkFilter(item, dupeReport) {
         if (wantedCombos.length == 0) {
             let dupeText = [];
             //console.log("unwantedItem", item.name, 'light:=' + item.Power, item.id, armorCombos, comboReasons);
-            dupeText.push([item.name, 'light:=' + item.basePower, item.id, "Reason: No Wanted Combos"].join(" "));
+            dupeText.push([item.classTypeName, item.bucket.type, item.name, 'light:=' + item.basePower, item.id, "Reason: No Wanted Combos"].join(" "));
             _.each(armorCombos, (combo, index) => {
                 var reason = comboReasons[index];
                 dupeText.push('"' + combo.join('" "') + '" (reason: ' + reason + ')');

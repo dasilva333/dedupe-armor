@@ -1,88 +1,25 @@
-total junk items:17
+total junk items:4
 
-"Wing Contender" light:=650 6917529086595199717 Reason: No Wanted Combos
-"Precision Weapon Targeting" "Linear Fusion Rifle Reserves" (reason: Duplicate Pair 1/1)
-"Precision Weapon Targeting" "Grenade Launcher Reserves" (reason: Duplicate Pair 2/0)
-"Light Reactor" "Linear Fusion Rifle Reserves" (reason: Unwanted Perk)
-"Light Reactor" "Grenade Launcher Reserves" (reason: Unwanted Perk)
+hunter Helmet "Tangled Web Mask" light:=634 6917529086619889309 Reason: No Wanted Combos
+"Heavy Lifting" "Rocket Launcher Reserves" (reason: Duplicate Pair 2/0)
+"Heavy Lifting" "Linear Fusion Rifle Reserves" (reason: Duplicate Pair 2/1)
+"Pulse Rifle Targeting" "Rocket Launcher Reserves" (reason: Duplicate Pair 2/0)
+"Pulse Rifle Targeting" "Linear Fusion Rifle Reserves" (reason: Duplicate Pair 2/0)
 
-"Iron Fellowship Grips" light:=620 6917529086563861104 Reason: No Wanted Combos
-"Momentum Transfer" "Sword Scavenger" (reason: Duplicate Pair 1/1)
-"Momentum Transfer" "Fusion Rifle Scavenger" (reason: Duplicate Pair 1/2)
-"Fastball" "Sword Scavenger" (reason: Duplicate Pair 2/0)
-"Fastball" "Fusion Rifle Scavenger" (reason: Duplicate Pair 2/1)
-
-"Red Moon Phantom Vest" light:=650 6917529069300791933 Reason: No Wanted Combos
-"Unflinching Energy Aim" "Sidearm Reserves" (reason: Duplicate Pair 2/0)
-"Unflinching Energy Aim" "Scout Rifle Reserves" (reason: Unwanted Perk)
-"Unflinching Auto Rifle Aim" "Sidearm Reserves" (reason: Duplicate Pair 3/0)
-"Unflinching Auto Rifle Aim" "Scout Rifle Reserves" (reason: Unwanted Perk)
-
-"Frostveil Vest" light:=10 6917529086575002876 Reason: No Wanted Combos
-"Unflinching Kinetic Aim" "Submachine Gun Reserves" (reason: Duplicate Pair 1/1)
-"Unflinching Kinetic Aim" "Sidearm Reserves" (reason: Duplicate Pair 1/1)
-"Unflinching Shotgun Aim" "Submachine Gun Reserves" (reason: Duplicate Pair 2/0)
-"Unflinching Shotgun Aim" "Sidearm Reserves" (reason: Duplicate Pair 2/0)
-
-"Wing Contender" light:=626 6917529086589121564 Reason: No Wanted Combos
-"Unflinching Machine Gun" "Sidearm Reserves" (reason: Duplicate Pair 2/1)
-"Unflinching Machine Gun" "Pulse Rifle Reserves" (reason: Unwanted Perk)
-"Unflinching Linear Fusion Aim" "Sidearm Reserves" (reason: Duplicate Pair 2/0)
-"Unflinching Linear Fusion Aim" "Pulse Rifle Reserves" (reason: Unwanted Perk)
-
-"Wing Contender" light:=631 6917529086571531811 Reason: No Wanted Combos
-"Oversize Weapon Dexterity" "Special Ammo Finder" (reason: Duplicate Pair 2/0)
-"Oversize Weapon Dexterity" "Scout Rifle Scavenger" (reason: Unwanted Perk)
-"Traction" "Special Ammo Finder" (reason: Duplicate Pair 2/3)
-"Traction" "Scout Rifle Scavenger" (reason: Unwanted Perk)
-
-"Cloak of Five Full Moons" light:=625 6917529086563858886 Reason: No Wanted Combos
-"Recuperation" "Auto Rifle Scavenger" (reason: Unwanted Perk)
-"Recuperation" "Grenade Launcher Reserves" (reason: Duplicate Pair 2/1)
-"Insulation" "Auto Rifle Scavenger" (reason: Unwanted Perk)
-"Insulation" "Grenade Launcher Reserves" (reason: Duplicate Pair 1/1)
-
-"Wing Contender" light:=621 6917529086595196144 Reason: No Wanted Combos
-"Better Already" "Grenade Launcher Scavenger" (reason: Duplicate Pair 1/1)
-"Better Already" "Shotgun Reserves" (reason: Duplicate Pair 2/1)
-"Recuperation" "Grenade Launcher Scavenger" (reason: Duplicate Pair 2/0)
-"Recuperation" "Shotgun Reserves" (reason: Duplicate Pair 3/0)
-
-"Tangled Web Cloak" light:=650 6917529083978143986 Reason: No Wanted Combos
-"Invigoration" "Rocket Launcher Scavenger" (reason: Unwanted Perk)
-"Invigoration" "Grenade Launcher Scavenger" (reason: Unwanted Perk)
-"Innervation" "Rocket Launcher Scavenger" (reason: Duplicate Pair 1/1)
-"Innervation" "Grenade Launcher Scavenger" (reason: Duplicate Pair 2/0)
-
-"Wing Contender" light:=625 6917529086601896620 Reason: No Wanted Combos
-"Invigoration" "Hand Cannon Scavenger" (reason: Unwanted Perk)
-"Invigoration" "Grenade Launcher Scavenger" (reason: Unwanted Perk)
-"Innervation" "Hand Cannon Scavenger" (reason: Duplicate Pair 1/1)
-"Innervation" "Grenade Launcher Scavenger" (reason: Duplicate Pair 2/0)
-
-"Qiao's Heart" light:=323 6917529055883429487 Reason: No Armor Combos Available
-"Qiao's Passing" light:=10 6917529065425642069 Reason: No Armor Combos Available
-"Tangled Web Vest" light:=627 6917529086111545744 Reason: No Wanted Combos
-"Unflinching Linear Fusion Aim" "Sidearm Reserves" (reason: Duplicate Pair 2/0)
-"Unflinching Linear Fusion Aim" "Pulse Rifle Reserves" (reason: Unwanted Perk)
-"Unflinching Auto Rifle Aim" "Sidearm Reserves" (reason: Duplicate Pair 3/0)
-"Unflinching Auto Rifle Aim" "Pulse Rifle Reserves" (reason: Unwanted Perk)
-
-"Wing Contender" light:=631 6917529086575002069 Reason: No Wanted Combos
-"Better Already" "Machine Gun Reserves" (reason: Duplicate Pair 2/0)
-"Better Already" "Linear Fusion Rifle Scavenger" (reason: Duplicate Pair 3/1)
-"Innervation" "Machine Gun Reserves" (reason: Duplicate Pair 3/1)
-"Innervation" "Linear Fusion Rifle Scavenger" (reason: Duplicate Pair 2/0)
-
-"Omega Mechanos Cloak" light:=10 6917529052099717472 Reason: No Armor Combos Available
-"Wing Contender" light:=631 6917529086575005075 Reason: No Wanted Combos
+hunter Hunter Cloak "Tangled Web Cloak" light:=633 6917529086619884253 Reason: No Wanted Combos
+"Recuperation" "Special Ammo Finder" (reason: Duplicate Pair 1/1)
+"Recuperation" "Sword Scavenger" (reason: Duplicate Pair 2/0)
 "Innervation" "Special Ammo Finder" (reason: Duplicate Pair 1/1)
-"Innervation" "Primary Ammo Finder" (reason: Unwanted Perk)
-"Insulation" "Special Ammo Finder" (reason: Duplicate Pair 1/3)
-"Insulation" "Primary Ammo Finder" (reason: Unwanted Perk)
+"Innervation" "Sword Scavenger" (reason: Duplicate Pair 2/0)
 
-"Red Moon Phantom Mask" light:=616 6917529083989778417 Reason: No Wanted Combos
-"Sidearm Targeting" "Sword Reserves" (reason: Duplicate Pair 1/2)
-"Sidearm Targeting" "Fusion Rifle Reserves" (reason: Duplicate Pair 2/1)
-"Pulse Rifle Targeting" "Sword Reserves" (reason: Duplicate Pair 3/1)
-"Pulse Rifle Targeting" "Fusion Rifle Reserves" (reason: Duplicate Pair 2/0)
+hunter Hunter Cloak "Wing Contender" light:=650 6917529086619882891 Reason: No Wanted Combos
+"Better Already" "Sniper Rifle Reserves" (reason: Duplicate Pair 2/0)
+"Better Already" "Shotgun Reserves" (reason: Duplicate Pair 2/1)
+"Insulation" "Sniper Rifle Reserves" (reason: Duplicate Pair 2/0)
+"Insulation" "Shotgun Reserves" (reason: Duplicate Pair 2/1)
+
+hunter Leg Armor "Red Moon Phantom Steps" light:=633 6917529086622604446 Reason: No Wanted Combos
+"Traction" "Pulse Rifle Scavenger" (reason: Unwanted Perk)
+"Traction" "Arrow Scavenger" (reason: Unwanted Perk)
+"Submachine Gun Dexterity" "Pulse Rifle Scavenger" (reason: Unwanted Perk)
+"Submachine Gun Dexterity" "Arrow Scavenger" (reason: Unwanted Perk)

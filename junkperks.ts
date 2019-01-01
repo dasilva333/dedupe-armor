@@ -26,6 +26,7 @@ _.each(_junkPerkMaps.legendaryArmor, function (armorItem) {
 
 var totalCount = "total junk items:" + dupeReport.length + "\n\n";
 console.log(totalCount);
+dupeReport = _.sortBy(dupeReport);
 fs.writeFileSync("report-v2.txt", totalCount + dupeReport.join("\n"));
 
 //console.log(dupeReport.join("\n"));

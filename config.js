@@ -6,13 +6,18 @@ module.exports = {
         "Auto Rifle Scavenger", "Pulse Rifle Scavenger", "Scout Rifle Scavenger",
         "Auto Rifle Reserves", "Pulse Rifle Reserves", "Scout Rifle Reserves",
         //I rarely do melee so remove those perks
-        "Impact Induction", "Light Reactor", "Invigoration", //"Hands-On",
+        "Impact Induction", "Invigoration", "Hands-On",
         //Bow doesn't need reload speed improvements, plenty of ammo so no need to buff that either
         "Bow Reloader", "Bow Reserves", "Arrow Scavenger",
         //who needs to really aim these anyway?
         "Unflinching Grenade Launcher Aim", "Unflinching Power Aim",
         //Primary Ammo is already plentiful and if we're going to make a spec something that affects all Power weapons is meh
-        "Primary Ammo Finder", "Unflinching Power Aim", "Power Dexterity"
+        "Primary Ammo Finder", "Unflinching Power Aim", "Power Dexterity",
+        //I don't want every combination that exists for Light Reactor (super energy from fusion rifle kills)
+        "Light Reactor"
+    ],
+    wantedPerkPairs: [
+        [ "Light Reactor", "Fusion Rifle Reserves"]
     ],
     //unwanted combos (first column + second column)
     unwantedPerkPairs: [
