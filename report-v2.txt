@@ -1,4 +1,4 @@
-total junk items:38
+total junk items:28
 
 hunter Chest Armor "Iron Fellowship Vest" light:=631 6917529086622603010 Reason: No Wanted Combos
 "Unflinching Submachine Gun Aim" "Scout Rifle Reserves" - Unwanted Perk
@@ -7,18 +7,18 @@ hunter Chest Armor "Iron Fellowship Vest" light:=631 6917529086622603010 Reason:
 "Unflinching Auto Rifle Aim" "Hand Cannon Reserves" - Duplicate Pair (1/1)
 
 hunter Chest Armor "Iron Fellowship Vest" light:=650 6917529086264857529 Reason: No Wanted Combos
-"Unflinching Hand Cannon Aim" "Submachine Gun Reserves" - Duplicate Pair (1/3)
-"Unflinching Hand Cannon Aim" "Sidearm Reserves" - Duplicate Pair (1/1)
+"Unflinching Hand Cannon Aim" "Submachine Gun Reserves" - Generic ETS: Unflinching Light Arms Aim,Submachine Gun Reserves
+"Unflinching Hand Cannon Aim" "Sidearm Reserves" - Generic ETS: Unflinching Light Arms Aim,Sidearm Reserves
 "Unflinching Auto Rifle Aim" "Submachine Gun Reserves" - Generic ETS: Unflinching Rifle Aim,Submachine Gun Reserves
-"Unflinching Auto Rifle Aim" "Sidearm Reserves" - Duplicate Pair (2/0)
+"Unflinching Auto Rifle Aim" "Sidearm Reserves" - Generic ETS: Unflinching Rifle Aim,Sidearm Reserves
 
 hunter Chest Armor "Reverie Dawn Hauberk" light:=609 6917529073852053305 Reason: No Wanted Combos
 "Unflinching Power Aim" "Submachine Gun Reserves" - Unwanted Perk
 "Unflinching Power Aim" "Sidearm Reserves" - Unwanted Perk
-"Unflinching Hand Cannon Aim" "Submachine Gun Reserves" - Dupe In Other 5PA (1/3)
+"Unflinching Hand Cannon Aim" "Submachine Gun Reserves" - Generic ETS: Unflinching Light Arms Aim,Submachine Gun Reserves
 "Unflinching Hand Cannon Aim" "Sidearm Reserves" - Generic ETS: Unflinching Light Arms Aim,Sidearm Reserves
 "Unflinching Bow Aim" "Submachine Gun Reserves" - Generic ETS: Unflinching Light Arms Aim,Submachine Gun Reserves
-"Unflinching Bow Aim" "Sidearm Reserves" - Dupe In Other 5PA (1/2)
+"Unflinching Bow Aim" "Sidearm Reserves" - Generic ETS: Unflinching Light Arms Aim,Sidearm Reserves
 
 hunter Chest Armor "Reverie Dawn Hauberk" light:=630 6917529084913815929 Reason: No Wanted Combos
 "Enhanced Unflinching Linear Fusion Aim" "Special Ammo Finder" - Dupe In Other 5PA (0/2)
@@ -32,7 +32,7 @@ hunter Chest Armor "Wing Contender" light:=650 6917529086278883300 Reason: No Wa
 "Unflinching Light Arms Aim" "Special Ammo Finder" - Duplicate Pair (1/2)
 "Unflinching Light Arms Aim" "Submachine Gun Reserves" - Duplicate Pair (2/0)
 "Unflinching Fusion Rifle Aim" "Special Ammo Finder" - Generic ETS: Unflinching Rifle Aim,Special Ammo Finder
-"Unflinching Fusion Rifle Aim" "Submachine Gun Reserves" - Duplicate Pair (2/0)
+"Unflinching Fusion Rifle Aim" "Submachine Gun Reserves" - Generic ETS: Unflinching Rifle Aim,Submachine Gun Reserves
 
 hunter Chest Armor "Wing Contender" light:=650 6917529086384902245 Reason: No Wanted Combos
 "Unflinching Linear Fusion Aim" "Special Ammo Finder" - Enhanced Pair Available
@@ -40,55 +40,13 @@ hunter Chest Armor "Wing Contender" light:=650 6917529086384902245 Reason: No Wa
 "Unflinching Hand Cannon Aim" "Special Ammo Finder" - Generic ETS: Unflinching Light Arms Aim,Special Ammo Finder
 "Unflinching Hand Cannon Aim" "Bow Reserves" - Unwanted Perk
 
-hunter Gauntlets "Iron Fellowship Grips" light:=629 6917529086601895287 Reason: No Wanted Combos
-"Sidearm Loader" "Heavy Ammo Finder" - Generic ETS: Light Arms Loader,Heavy Ammo Finder
-"Sidearm Loader" "Fusion Rifle Scavenger" - Duplicate Pair (2/0)
-"Bow Reloader" "Heavy Ammo Finder" - Unwanted Perk
-"Bow Reloader" "Fusion Rifle Scavenger" - Unwanted Perk
-
-hunter Gauntlets "Iron Fellowship Grips" light:=631 6917529086384911233 Reason: No Wanted Combos
-"Machine Gun Loader" "Machine Gun Scavenger" - Duplicate Pair (2/0)
-"Machine Gun Loader" "Sword Scavenger" - Impossible Pair
-"Pulse Rifle Loader" "Machine Gun Scavenger" - Duplicate Pair (1/1)
-"Pulse Rifle Loader" "Sword Scavenger" - Generic ETS: Rifle Loader,Sword Scavenger
-
-hunter Gauntlets "Prodigal Grasps" light:=624 6917529085022317840 Reason: No Wanted Combos
-"Impact Induction" "Machine Gun Scavenger" - Unwanted Perk
-"Impact Induction" "Heavy Ammo Finder" - Unwanted Perk
-"Fusion Rifle Loader" "Machine Gun Scavenger" - Generic ETS: Rifle Loader,Machine Gun Scavenger
-"Fusion Rifle Loader" "Heavy Ammo Finder" - Generic ETS: Rifle Loader,Heavy Ammo Finder
-
-hunter Gauntlets "Prodigal Grasps" light:=635 6917529086675495925 Reason: No Wanted Combos
-"Scout Rifle Loader" "Machine Gun Scavenger" - Generic ETS: Rifle Loader,Machine Gun Scavenger
-"Scout Rifle Loader" "Heavy Ammo Finder" - Generic ETS: Rifle Loader,Heavy Ammo Finder
-"Bow Reloader" "Machine Gun Scavenger" - Unwanted Perk
-"Bow Reloader" "Heavy Ammo Finder" - Unwanted Perk
-
-hunter Gauntlets "Prodigal Grasps" light:=650 6917529086689942733 Reason: No Wanted Combos
-"Momentum Transfer" "Heavy Ammo Finder" - Duplicate Pair (3/4)
-"Momentum Transfer" "Grenade Launcher Scavenger" - Duplicate Pair (3/0)
-"Pulse Rifle Loader" "Heavy Ammo Finder" - Duplicate Pair (2/0)
-"Pulse Rifle Loader" "Grenade Launcher Scavenger" - Generic ETS: Rifle Loader,Grenade Launcher Scavenger
-
 hunter Gauntlets "Reverie Dawn Grasps" light:=629 6917529084525170231 Reason: No Wanted Combos
 "Fastball" "Sniper Rifle Scavenger" - Dupe In Other 5PA (0/3)
 "Fastball" "Grenade Launcher Scavenger" - Dupe In Other 5PA (0/2)
 "Submachine Gun Loader" "Sniper Rifle Scavenger" - Generic ETS: Light Arms Loader,Sniper Rifle Scavenger
 "Submachine Gun Loader" "Grenade Launcher Scavenger" - Generic ETS: Light Arms Loader,Grenade Launcher Scavenger
-"Fusion Rifle Loader" "Sniper Rifle Scavenger" - Dupe In Other 5PA (1/2)
+"Fusion Rifle Loader" "Sniper Rifle Scavenger" - Generic ETS: Rifle Loader,Sniper Rifle Scavenger
 "Fusion Rifle Loader" "Grenade Launcher Scavenger" - Generic ETS: Rifle Loader,Grenade Launcher Scavenger
-
-hunter Gauntlets "Tangled Web Grips" light:=650 6917529082036593119 Reason: No Wanted Combos
-"Sniper Rifle Loader" "Heavy Ammo Finder" - Generic ETS: Rifle Loader,Heavy Ammo Finder
-"Sniper Rifle Loader" "Special Ammo Finder" - Generic ETS: Rifle Loader,Special Ammo Finder
-"Pulse Rifle Loader" "Heavy Ammo Finder" - Duplicate Pair (2/0)
-"Pulse Rifle Loader" "Special Ammo Finder" - Generic ETS: Rifle Loader,Special Ammo Finder
-
-hunter Gauntlets "Wing Contender" light:=650 6917529085228077076 Reason: No Wanted Combos
-"Power Weapon Loader" "Sniper Rifle Scavenger" - Duplicate Pair (2/0)
-"Power Weapon Loader" "Fusion Rifle Scavenger" - Duplicate Pair (2/1)
-"Fusion Rifle Loader" "Sniper Rifle Scavenger" - Duplicate Pair (1/2)
-"Fusion Rifle Loader" "Fusion Rifle Scavenger" - Generic ETS: Rifle Loader,Fusion Rifle Scavenger
 
 hunter Helmet "Ancient Apocalypse Mask" light:=600 6917529071306649298 Reason: No Wanted Combos
 "Pump Action" "Special Ammo Finder" - Duplicate Pair (3/3)
@@ -116,11 +74,17 @@ hunter Helmet "Prodigal Mask" light:=629 6917529084916487653 Reason: No Wanted C
 "Sidearm Targeting" "Shotgun Reserves" - Generic ETS: Scatter Projectile Targeting,Shotgun Reserves
 "Sidearm Targeting" "Grenade Launcher Reserves" - Generic ETS: Scatter Projectile Targeting,Grenade Launcher Reserves
 
+hunter Helmet "Prodigal Mask" light:=629 6917529086761241022 Reason: No Wanted Combos
+"Light Reactor" "Machine Gun Reserves" - Unwanted Perk
+"Light Reactor" "Heavy Ammo Finder" - Unwanted Perk
+"Hand Cannon Targeting" "Machine Gun Reserves" - Generic ETS: Precision Weapon Targeting,Machine Gun Reserves
+"Hand Cannon Targeting" "Heavy Ammo Finder" - Generic ETS: Precision Weapon Targeting,Heavy Ammo Finder
+
 hunter Helmet "Red Moon Phantom Mask" light:=632 6917529086663643250 Reason: No Wanted Combos
 "Scout Rifle Targeting" "Heavy Ammo Finder" - Generic ETS: Precision Weapon Targeting,Heavy Ammo Finder
-"Scout Rifle Targeting" "Linear Fusion Rifle Reserves" - Duplicate Pair (1/1)
-"Fusion Rifle Targeting" "Heavy Ammo Finder" - Duplicate Pair (2/0)
-"Fusion Rifle Targeting" "Linear Fusion Rifle Reserves" - Duplicate Pair (1/1)
+"Scout Rifle Targeting" "Linear Fusion Rifle Reserves" - Generic ETS: Precision Weapon Targeting,Linear Fusion Rifle Reserves
+"Fusion Rifle Targeting" "Heavy Ammo Finder" - Generic ETS: Scatter Projectile Targeting,Heavy Ammo Finder
+"Fusion Rifle Targeting" "Linear Fusion Rifle Reserves" - Generic ETS: Scatter Projectile Targeting,Linear Fusion Rifle Reserves
 
 hunter Helmet "Red Moon Phantom Mask" light:=635 6917529085707103366 Reason: No Wanted Combos
 "Machine Gun Targeting" "Shotgun Reserves" - Duplicate Pair (2/1)
@@ -131,25 +95,25 @@ hunter Helmet "Red Moon Phantom Mask" light:=635 6917529085707103366 Reason: No 
 hunter Helmet "Red Moon Phantom Mask" light:=650 6917529083902283369 Reason: No Wanted Combos
 "Shotgun Targeting" "Heavy Ammo Finder" - Duplicate Pair (2/0)
 "Shotgun Targeting" "Special Ammo Finder" - Duplicate Pair (1/1)
-"Linear Fusion Rifle Targeting" "Heavy Ammo Finder" - Duplicate Pair (2/0)
+"Linear Fusion Rifle Targeting" "Heavy Ammo Finder" - Generic ETS: Precision Weapon Targeting,Heavy Ammo Finder
 "Linear Fusion Rifle Targeting" "Special Ammo Finder" - Generic ETS: Precision Weapon Targeting,Special Ammo Finder
 
 hunter Helmet "Scatterhorn Mask" light:=617 6917529084197000834 Reason: No Wanted Combos
 "Ashes to Assets" "Heavy Ammo Finder" - Duplicate Pair (3/2)
 "Ashes to Assets" "Shotgun Reserves" - Duplicate Pair (3/3)
-"Auto Rifle Targeting" "Heavy Ammo Finder" - Duplicate Pair (1/1)
+"Auto Rifle Targeting" "Heavy Ammo Finder" - Generic ETS: Scatter Projectile Targeting,Heavy Ammo Finder
 "Auto Rifle Targeting" "Shotgun Reserves" - Generic ETS: Scatter Projectile Targeting,Shotgun Reserves
 
 hunter Helmet "Scatterhorn Mask" light:=624 6917529085347355611 Reason: No Wanted Combos
 "Hands-On" "Machine Gun Reserves" - Unwanted Perk
 "Hands-On" "Heavy Ammo Finder" - Unwanted Perk
 "Submachine Gun Targeting" "Machine Gun Reserves" - Generic ETS: Scatter Projectile Targeting,Machine Gun Reserves
-"Submachine Gun Targeting" "Heavy Ammo Finder" - Duplicate Pair (2/0)
+"Submachine Gun Targeting" "Heavy Ammo Finder" - Generic ETS: Scatter Projectile Targeting,Heavy Ammo Finder
 
 hunter Helmet "Tangled Web Mask" light:=617 6917529084658379827 Reason: No Wanted Combos
 "Pump Action" "Machine Gun Reserves" - Duplicate Pair (1/1)
 "Pump Action" "Sniper Rifle Reserves" - Duplicate Pair (3/1)
-"Sidearm Targeting" "Machine Gun Reserves" - Duplicate Pair (2/0)
+"Sidearm Targeting" "Machine Gun Reserves" - Generic ETS: Scatter Projectile Targeting,Machine Gun Reserves
 "Sidearm Targeting" "Sniper Rifle Reserves" - Generic ETS: Scatter Projectile Targeting,Sniper Rifle Reserves
 
 hunter Helmet "Tangled Web Mask" light:=620 6917529084702690347 Reason: No Wanted Combos
@@ -159,8 +123,8 @@ hunter Helmet "Tangled Web Mask" light:=620 6917529084702690347 Reason: No Wante
 "Sidearm Targeting" "Rocket Launcher Reserves" - Generic ETS: Scatter Projectile Targeting,Rocket Launcher Reserves
 
 hunter Helmet "Tangled Web Mask" light:=629 6917529085777743657 Reason: No Wanted Combos
-"Sidearm Targeting" "Machine Gun Reserves" - Duplicate Pair (2/0)
-"Sidearm Targeting" "Fusion Rifle Reserves" - Duplicate Pair (1/1)
+"Sidearm Targeting" "Machine Gun Reserves" - Generic ETS: Scatter Projectile Targeting,Machine Gun Reserves
+"Sidearm Targeting" "Fusion Rifle Reserves" - Generic ETS: Scatter Projectile Targeting,Fusion Rifle Reserves
 "Hand Cannon Targeting" "Machine Gun Reserves" - Generic ETS: Precision Weapon Targeting,Machine Gun Reserves
 "Hand Cannon Targeting" "Fusion Rifle Reserves" - Enhanced Pair Available
 
@@ -171,67 +135,43 @@ hunter Helmet "Tangled Web Mask" light:=630 6917529085830149385 Reason: No Wante
 "Bow Targeting" "Grenade Launcher Reserves" - Generic ETS: Precision Weapon Targeting,Grenade Launcher Reserves
 
 hunter Helmet "Tangled Web Mask" light:=633 6917529085406773112 Reason: No Wanted Combos
-"Submachine Gun Targeting" "Sniper Rifle Reserves" - Duplicate Pair (1/1)
+"Submachine Gun Targeting" "Sniper Rifle Reserves" - Generic ETS: Scatter Projectile Targeting,Sniper Rifle Reserves
 "Submachine Gun Targeting" "Shotgun Reserves" - Generic ETS: Scatter Projectile Targeting,Shotgun Reserves
 "Pulse Rifle Targeting" "Sniper Rifle Reserves" - Generic ETS: Scatter Projectile Targeting,Sniper Rifle Reserves
-"Pulse Rifle Targeting" "Shotgun Reserves" - Duplicate Pair (2/0)
+"Pulse Rifle Targeting" "Shotgun Reserves" - Generic ETS: Scatter Projectile Targeting,Shotgun Reserves
 
 hunter Helmet "Vigil of Heroes" light:=631 6917529086264858782 Reason: No Wanted Combos
 "Kinetic Weapon Targeting" "Sniper Rifle Reserves" - Duplicate Pair (2/0)
 "Kinetic Weapon Targeting" "Rocket Launcher Reserves" - Duplicate Pair (1/1)
 "Auto Rifle Targeting" "Sniper Rifle Reserves" - Generic ETS: Scatter Projectile Targeting,Sniper Rifle Reserves
-"Auto Rifle Targeting" "Rocket Launcher Reserves" - Duplicate Pair (1/1)
+"Auto Rifle Targeting" "Rocket Launcher Reserves" - Generic ETS: Scatter Projectile Targeting,Rocket Launcher Reserves
 
 hunter Helmet "Wing Contender" light:=631 6917529068982983584 Reason: No Wanted Combos
 "Scout Rifle Targeting" "Sniper Rifle Reserves" - Generic ETS: Precision Weapon Targeting,Sniper Rifle Reserves
 "Scout Rifle Targeting" "Shotgun Reserves" - Generic ETS: Precision Weapon Targeting,Shotgun Reserves
-"Bow Targeting" "Sniper Rifle Reserves" - Duplicate Pair (1/1)
-"Bow Targeting" "Shotgun Reserves" - Duplicate Pair (1/3)
+"Bow Targeting" "Sniper Rifle Reserves" - Generic ETS: Precision Weapon Targeting,Sniper Rifle Reserves
+"Bow Targeting" "Shotgun Reserves" - Enhanced Pair Available
 
 hunter Helmet "Wing Contender" light:=631 6917529086262001223 Reason: No Wanted Combos
 "Submachine Gun Targeting" "Sword Reserves" - Generic ETS: Scatter Projectile Targeting,Sword Reserves
-"Submachine Gun Targeting" "Linear Fusion Rifle Reserves" - Duplicate Pair (1/1)
-"Auto Rifle Targeting" "Sword Reserves" - Duplicate Pair (2/0)
-"Auto Rifle Targeting" "Linear Fusion Rifle Reserves" - Duplicate Pair (1/1)
+"Submachine Gun Targeting" "Linear Fusion Rifle Reserves" - Generic ETS: Scatter Projectile Targeting,Linear Fusion Rifle Reserves
+"Auto Rifle Targeting" "Sword Reserves" - Generic ETS: Scatter Projectile Targeting,Sword Reserves
+"Auto Rifle Targeting" "Linear Fusion Rifle Reserves" - Generic ETS: Scatter Projectile Targeting,Linear Fusion Rifle Reserves
 
 hunter Helmet "Wing Contender" light:=648 6917529080985129302 Reason: No Wanted Combos
 "Light Reactor" "Heavy Ammo Finder" - Unwanted Perk
 "Light Reactor" "Linear Fusion Rifle Reserves" - Unwanted Perk
-"Linear Fusion Rifle Targeting" "Heavy Ammo Finder" - Duplicate Pair (2/0)
+"Linear Fusion Rifle Targeting" "Heavy Ammo Finder" - Generic ETS: Precision Weapon Targeting,Heavy Ammo Finder
 "Linear Fusion Rifle Targeting" "Linear Fusion Rifle Reserves" - Generic ETS: Precision Weapon Targeting,Linear Fusion Rifle Reserves
 
 hunter Helmet "Wing Contender" light:=650 6917529083836866134 Reason: No Wanted Combos
 "Pulse Rifle Targeting" "Special Ammo Finder" - Generic ETS: Scatter Projectile Targeting,Special Ammo Finder
-"Pulse Rifle Targeting" "Sword Reserves" - Duplicate Pair (2/1)
+"Pulse Rifle Targeting" "Sword Reserves" - Generic ETS: Scatter Projectile Targeting,Sword Reserves
 "Auto Rifle Targeting" "Special Ammo Finder" - Generic ETS: Scatter Projectile Targeting,Special Ammo Finder
-"Auto Rifle Targeting" "Sword Reserves" - Duplicate Pair (2/0)
+"Auto Rifle Targeting" "Sword Reserves" - Generic ETS: Scatter Projectile Targeting,Sword Reserves
 
 hunter Helmet "Wing Contender" light:=650 6917529084425204908 Reason: No Wanted Combos
-"Hand Cannon Targeting" "Rocket Launcher Reserves" - Generic ETS: Precision Weapon Targeting,Rocket Launcher Reserves
-"Hand Cannon Targeting" "Linear Fusion Rifle Reserves" - Duplicate Pair (2/0)
+"Hand Cannon Targeting" "Rocket Launcher Reserves" - Enhanced Pair Available
+"Hand Cannon Targeting" "Linear Fusion Rifle Reserves" - Generic ETS: Precision Weapon Targeting,Linear Fusion Rifle Reserves
 "Bow Targeting" "Rocket Launcher Reserves" - Enhanced Pair Available
 "Bow Targeting" "Linear Fusion Rifle Reserves" - Generic ETS: Precision Weapon Targeting,Linear Fusion Rifle Reserves
-
-hunter Leg Armor "Tangled Web Strides" light:=627 6917529085151742817 Reason: No Wanted Combos
-"Fusion Rifle Dexterity" "Hand Cannon Scavenger" - Duplicate Pair (2/0)
-"Fusion Rifle Dexterity" "Arrow Scavenger" - Unwanted Perk
-"Bow Dexterity" "Hand Cannon Scavenger" - Generic ETS: Light Arms Dexterity,Hand Cannon Scavenger
-"Bow Dexterity" "Arrow Scavenger" - Unwanted Perk
-
-hunter Leg Armor "Tangled Web Strides" light:=631 6917529086649519630 Reason: No Wanted Combos
-"Power Dexterity" "Special Ammo Finder" - Unwanted Perk
-"Power Dexterity" "Arrow Scavenger" - Unwanted Perk
-"Pulse Rifle Dexterity" "Special Ammo Finder" - Generic ETS: Rifle Dexterity,Special Ammo Finder
-"Pulse Rifle Dexterity" "Arrow Scavenger" - Unwanted Perk
-
-hunter Leg Armor "Vanguard Dare Boots" light:=10 6917529086571528643 Reason: No Wanted Combos
-"Machine Gun Dexterity" "Sidearm Scavenger" - Duplicate Pair (2/0)
-"Machine Gun Dexterity" "Arrow Scavenger" - Unwanted Perk
-"Scout Rifle Dexterity" "Sidearm Scavenger" - Generic ETS: Rifle Dexterity,Sidearm Scavenger
-"Scout Rifle Dexterity" "Arrow Scavenger" - Unwanted Perk
-
-hunter Leg Armor "Wing Contender" light:=620 6917529081662692051 Reason: No Wanted Combos
-"Linear Fusion Dexterity" "Special Ammo Finder" - Duplicate Pair (1/1)
-"Linear Fusion Dexterity" "Arrow Scavenger" - Unwanted Perk
-"Bow Dexterity" "Special Ammo Finder" - Generic ETS: Oversize Weapon Dexterity,Special Ammo Finder
-"Bow Dexterity" "Arrow Scavenger" - Unwanted Perk

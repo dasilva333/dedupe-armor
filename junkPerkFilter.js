@@ -320,6 +320,22 @@ function junkPerkFilter(item, dupeReport) {
                 return false;
             }
 
+            /* Enhanced Pair - Enhanced version of the perk pair available */
+            const hasEnhancedPair = _.has(junkPmByClass.unwantedPairBcEnhanced, comboString);
+            if (hasEnhancedPair) {
+                comboReasons.push('Enhanced Pair Available');
+                return false;
+            }
+            
+            /* Generic ETS Available */
+            //TODO: Check if 5PA item to ensure ETS is available in other 5PA only
+            const hasGenericReplacement = _.has(junkPmByClass.unwantedBcGenericEtsPairs, comboString);
+            if (hasGenericReplacement) {
+                const replacementCombo = junkPmByClass.unwantedBcGenericEtsPairs[comboString];
+                comboReasons.push('Generic ETS: ' + replacementCombo);
+                return false;
+            }
+            
             /* Duplicate Perk */
             const perkPairCount = junkPmByClass.perkPairCount[comboString];
             /*if (item.id == "6917529086278883300") {
@@ -333,23 +349,6 @@ function junkPerkFilter(item, dupeReport) {
             //if the item is a 5pa then it can only be replaced by another 5pa armor piece
             if (!isFourPa && perkPairCount.fivePa >= 2) {
                 comboReasons.push('Dupe In Other 5PA (' + perkPairCount.fourPa + '/' + perkPairCount.fivePa + ')');
-                return false;
-            }
-            /*if (comboString == "Unflinching Fusion Rifle Aim,Special Ammo Finder") {
-                      console.log("test", perkPairCount)
-                  }*/
-            /* Enhanced Pair - Enhanced version of the perk pair available */
-            const hasEnhancedPair = _.has(junkPmByClass.unwantedPairBcEnhanced, comboString);
-            if (hasEnhancedPair) {
-                comboReasons.push('Enhanced Pair Available');
-                return false;
-            }
-
-            /* Generic ETS Available */
-            const hasGenericReplacement = _.has(junkPmByClass.unwantedBcGenericEtsPairs, comboString);
-            if (hasGenericReplacement) {
-                const replacementCombo = junkPmByClass.unwantedBcGenericEtsPairs[comboString];
-                comboReasons.push('Generic ETS: ' + replacementCombo);
                 return false;
             }
 
