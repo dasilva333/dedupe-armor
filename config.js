@@ -28,7 +28,7 @@ module.exports = {
     uniqueWeaponSlots: ["Sword", "Rocket", "Linear", "Machine"],
 
     // if you have the generic type you don't need the specific type (these generic are the same speed as the specific)
-    genericsEqualToSpecifics: {
+    genericEtsPerks: {
         // this applies to gauntlets, machine gun isn't specified but testing shows it has an improvement
         'Large Weapon': ['Rocket Launcher', 'Grenade Launcher', 'Shotgun', "Machine Gun"],        
         // these apply to both gauntlets and chests
@@ -59,20 +59,20 @@ module.exports = {
     genericTypeEquivalents: {
         'Kinetic Weapon': {
             'Helmet': [ 'Precision Weapon', 'Scatter Projectile' ],
-            'Gauntlets': [ 'Rifle', 'Light Arms', 'Large Weapon'],
-            'Chest Armor': [ 'Rifle', 'Light Arms', 'Large Arms' ],
+            'Gauntlets': [ 'Rifle', 'Light Arms', 'Large Weapon' ],
+            'Chest Armor': [ 'Rifle', 'Light Arms' ],
             'Boots': [ 'Rifle', 'Light Arms', 'Oversize Weapon' ],
         },
         'Energy Weapon': {
             'Helmet': [ 'Precision Weapon', 'Scatter Projectile' ],
             'Gauntlets': [ 'Rifle', 'Light Arms', 'Large Weapon'],
-            'Chest Armor': [ 'Rifle', 'Light Arms', 'Large Arms' ],
+            'Chest Armor': [ 'Rifle', 'Light Arms' ],
             'Boots': [ 'Rifle', 'Light Arms', 'Oversize Weapon' ],
         },
         'Power Weapon': {
             'Helmet': [ 'Precision Weapon' ],
-            'Gauntlets': [ 'Rifle', 'Large Weapon'],
-            'Chest Armor': [ 'Rifle', 'Large Arms' ],
+            'Gauntlets': [ 'Rifle', 'Large Weapon' ],
+            'Chest Armor': [ 'Rifle' ],
             'Boots': [ 'Rifle', 'Oversize Weapon' ],
         }        
     },

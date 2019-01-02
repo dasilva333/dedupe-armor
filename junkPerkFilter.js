@@ -6,6 +6,7 @@ const junkPerkPresets = require("./config.js");
     4pa - 4-perk-armor: armor with 2 perks in the first column, 2 perks in the second column
     5pa - 5-perk-armor: armor with 3 perks in the first column, 2 perks in the second column
     combo: perk pair from first and second column traits
+    ets: equal to specific, equivalent gain or improvement
 */
 let _junkPerkMaps = null;
 function initJunkPerks(stores) {
@@ -29,13 +30,15 @@ function initJunkPerks(stores) {
             wantedPerkPairs: _.map(junkPerkPresets.wantedPerkPairs, function (combo) {
                 return combo.join(",");
             }),
+            genericEtsPerkNames: _.keys(junkPerkPresets.genericEtsPerks),
             armorCombos: {},
             armorPerks: {},
             impossiblePerkPairs: {},
             perkPairCount: {},
             armorPerkCount: {},
             itemTypeNameCounts: {},
-            unwantedPairBcEnhanced: {}
+            unwantedPairBcEnhanced: {},
+            unwantedBcGenericEtsPairs: {}
         };
         // console.log("legendaryArmor!", _.keys(_junkPerkMaps.legendaryArmor).length);
         /* transform the first and second column to perk-pairs */
@@ -81,9 +84,10 @@ function initJunkPerks(stores) {
 
         /* loop over combos to precompute statistics for the filter */
         _.each(_junkPerkMaps.armorCombos, (combos, itemId) => {
-            var isFourPa = combos.length == 4;
-            var perks = _junkPerkMaps.armorPerks[itemId];
-
+            const isFourPa = combos.length == 4;
+            const perks = _junkPerkMaps.armorPerks[itemId];
+            const armorType = _.find(_junkPerkMaps.legendaryArmor, { id: itemId }).bucket.type;
+            // const applicableGenericEtsNames = junkPerkPresets.genericTypeEquivalents
             /* Reason: Unique Perk */
             _.each(perks, (perkName) => {
                 if (!_.has(_junkPerkMaps.armorPerkCount, perkName)) {
@@ -96,6 +100,32 @@ function initJunkPerks(stores) {
                 const fcPerkTag = combo[0].split(" ")[0];
                 const scWeapon = combo[1].split(" ")[0];
                 const comboString = combo.join(",");
+                let fcPerkName = combo[0];
+                //console.log("armorType", armorType);
+                //manipulate the string in this way so I can check for the beginning of the string and avoid catch {{Other}} Rifle parks
+                if ( armorType == "Chest Armor" ){
+                    fcPerkName = fcPerkName.replace("Unflinching ", "");
+                }
+                _.each(_junkPerkMaps.genericEtsPerkNames, function(genericEtsPerkName){
+                    //this check ensures it's only in the beginning (first character) of the perk name                    
+                    if ( fcPerkName.indexOf(genericEtsPerkName) == 0 ){
+                        // console.log("fcPerkName", genericEtsPerkName, combo );    
+                        var affectedWeapons = junkPerkPresets.genericEtsPerks[genericEtsPerkName];
+                        _.each(affectedWeapons, function(weaponName){
+                            //return an array of perks that aren't needed bc the equivalent is found
+                            var fcPerkNameEquiv = combo[0].replace(genericEtsPerkName, weaponName);
+                            if (armorType=="Chest Armor" && genericEtsPerkName == "Large Arms"){
+                                fcPerkNameEquiv = fcPerkNameEquiv + " Aim";
+                            }
+                            var equivalentCombo = [ fcPerkNameEquiv, combo[1] ].join(",");
+                            _junkPerkMaps.unwantedBcGenericEtsPairs[equivalentCombo] = combo;
+                        });
+                        //console.log("combo", combo);
+                        //unwantedBcGenericFastPairs[keyName] = keyName;
+                    }
+                });
+                // console.log("_junkPerkMaps.unwantedBcGenericEtsPairs", _junkPerkMaps.unwantedBcGenericEtsPairs);
+
                 /* Reason: Impossible Perk Pairs */
                 if (junkPerkPresets.uniqueWeaponSlots.indexOf(fcPerkTag) > -1 && junkPerkPresets.uniqueWeaponSlots.indexOf(scWeapon) > -1 &&
                     junkPerkPresets.uniqueWeaponSlots.indexOf(fcPerkTag) != junkPerkPresets.uniqueWeaponSlots.indexOf(scWeapon)) {
@@ -264,6 +294,14 @@ function junkPerkFilter(item, dupeReport) {
             const hasEnhancedPair = _.has(_junkPerkMaps.unwantedPairBcEnhanced, comboString);
             if (hasEnhancedPair){
                 comboReasons.push("Enhanced Pair Available");
+                return false;
+            }
+
+            /* Generic ETS Available */
+            const hasGenericReplacement = _.has(_junkPerkMaps.unwantedBcGenericEtsPairs, comboString);
+            if (hasGenericReplacement){
+                const replacementCombo = _junkPerkMaps.unwantedBcGenericEtsPairs[comboString];
+                comboReasons.push("Generic ETS: " + replacementCombo);
                 return false;
             }
 
