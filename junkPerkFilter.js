@@ -137,7 +137,7 @@ function initJunkPerks(stores) {
                                 var equivalentCombo = [fcPerkNameEquiv, combo[1]].join(',');
                                 if (!_.has(junkPmByClass.unwantedBcGenericEtsPairs, equivalentCombo)) {
                                     junkPmByClass.unwantedBcGenericEtsPairs[equivalentCombo] = {
-                                        fivaPa: 0,
+                                        fivePa: 0,
                                         fourPa: 0,
                                         fourPaIDs: [],
                                         fivePaIDs: [],

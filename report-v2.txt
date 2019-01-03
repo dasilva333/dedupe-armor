@@ -2,20 +2,20 @@ total junk items:11
 
 hunter Chest Armor "Iron Fellowship Vest" light:=631 6917529086622603010 Reason: No Wanted Combos
 "Unflinching Submachine Gun Aim" "Scout Rifle Reserves" - Unwanted Perk
-"Unflinching Submachine Gun Aim" "Hand Cannon Reserves" - Generic ETS - Unflinching Light Arms Aim,Hand Cannon Reserves(0/NaN)
+"Unflinching Submachine Gun Aim" "Hand Cannon Reserves" - Generic ETS - Unflinching Light Arms Aim,Hand Cannon Reserves(0/1)
 "Unflinching Auto Rifle Aim" "Scout Rifle Reserves" - Unwanted Perk
 "Unflinching Auto Rifle Aim" "Hand Cannon Reserves" - Duplicate Pair (1/1)
 
 hunter Chest Armor "Iron Fellowship Vest" light:=650 6917529086264857529 Reason: No Wanted Combos
-"Unflinching Hand Cannon Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/undefined)
-"Unflinching Hand Cannon Aim" "Sidearm Reserves" - Generic ETS - Unflinching Light Arms Aim,Sidearm Reserves(0/NaN)
-"Unflinching Auto Rifle Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Rifle Aim,Submachine Gun Reserves(1/undefined)
-"Unflinching Auto Rifle Aim" "Sidearm Reserves" - Generic ETS - Unflinching Rifle Aim,Sidearm Reserves(0/NaN)
+"Unflinching Hand Cannon Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/0)
+"Unflinching Hand Cannon Aim" "Sidearm Reserves" - Generic ETS - Unflinching Light Arms Aim,Sidearm Reserves(0/1)
+"Unflinching Auto Rifle Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Rifle Aim,Submachine Gun Reserves(1/0)
+"Unflinching Auto Rifle Aim" "Sidearm Reserves" - Generic ETS - Unflinching Rifle Aim,Sidearm Reserves(0/1)
 
 hunter Chest Armor "Red Moon Phantom Vest" light:=650 6917529069300791933 Reason: No Wanted Combos
 "Unflinching Energy Aim" "Sidearm Reserves" - Duplicate Pair (2/0)
 "Unflinching Energy Aim" "Scout Rifle Reserves" - Unwanted Perk
-"Unflinching Auto Rifle Aim" "Sidearm Reserves" - Generic ETS - Unflinching Rifle Aim,Sidearm Reserves(0/NaN)
+"Unflinching Auto Rifle Aim" "Sidearm Reserves" - Generic ETS - Unflinching Rifle Aim,Sidearm Reserves(0/1)
 "Unflinching Auto Rifle Aim" "Scout Rifle Reserves" - Unwanted Perk
 
 hunter Chest Armor "Reverie Dawn Hauberk" light:=609 6917529073852053305 Reason: No Wanted Combos
@@ -31,7 +31,7 @@ hunter Chest Armor "Reverie Dawn Hauberk" light:=630 6917529084913815929 Reason:
 "Enhanced Unflinching Linear Fusion Aim" "Auto Rifle Reserves" - Unwanted Perk
 "Unflinching Light Arms Aim" "Special Ammo Finder" - Dupe In Other 5PA (1/2)
 "Unflinching Light Arms Aim" "Auto Rifle Reserves" - Unwanted Perk
-"Unflinching Sidearm Aim" "Special Ammo Finder" - Dupe In Other 5PA (0/2)
+"Unflinching Sidearm Aim" "Special Ammo Finder" - Generic ETS w 5PA  - Unflinching Light Arms Aim,Special Ammo Finder(1/2)
 "Unflinching Sidearm Aim" "Auto Rifle Reserves" - Unwanted Perk
 
 hunter Chest Armor "Reverie Dawn Hauberk" light:=631 6917529086698356345 Reason: No Wanted Combos
@@ -45,13 +45,13 @@ hunter Chest Armor "Reverie Dawn Hauberk" light:=631 6917529086698356345 Reason:
 hunter Chest Armor "Wing Contender" light:=650 6917529086278883300 Reason: No Wanted Combos
 "Unflinching Light Arms Aim" "Special Ammo Finder" - Duplicate Pair (1/2)
 "Unflinching Light Arms Aim" "Submachine Gun Reserves" - Duplicate Pair (2/0)
-"Unflinching Fusion Rifle Aim" "Special Ammo Finder" - Generic ETS - Unflinching Rifle Aim,Special Ammo Finder(1/undefined)
-"Unflinching Fusion Rifle Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Rifle Aim,Submachine Gun Reserves(1/undefined)
+"Unflinching Fusion Rifle Aim" "Special Ammo Finder" - Generic ETS - Unflinching Rifle Aim,Special Ammo Finder(1/0)
+"Unflinching Fusion Rifle Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Rifle Aim,Submachine Gun Reserves(1/0)
 
 hunter Chest Armor "Wing Contender" light:=650 6917529086384902245 Reason: No Wanted Combos
 "Unflinching Linear Fusion Aim" "Special Ammo Finder" - Enhanced Pair Available
 "Unflinching Linear Fusion Aim" "Bow Reserves" - Unwanted Perk
-"Unflinching Hand Cannon Aim" "Special Ammo Finder" - Generic ETS - Unflinching Light Arms Aim,Special Ammo Finder(1/NaN)
+"Unflinching Hand Cannon Aim" "Special Ammo Finder" - Generic ETS - Unflinching Light Arms Aim,Special Ammo Finder(1/2)
 "Unflinching Hand Cannon Aim" "Bow Reserves" - Unwanted Perk
 
 hunter Gauntlets "Reverie Dawn Grasps" light:=614 6917529084534586601 Reason: No Wanted Combos
