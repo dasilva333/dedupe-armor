@@ -9,6 +9,7 @@ const junkPerkPresets = require('./config.js');
     ets: equal to specific, equivalent gain or improvement
 */
 let _junkPerkMaps = null;
+
 function initJunkPerks(stores) {
     if (_junkPerkMaps === null && stores.length > 0) {
         dupeReport = [];
@@ -35,9 +36,7 @@ function initJunkPerks(stores) {
                 return combo.join(',');
             }),
             genericEtsPerkNames: _.keys(junkPerkPresets.genericEtsPerks),
-            statsByClassName: {
-
-            }
+            statsByClassName: {}
         };
         /* transform the first and second column to perk-pairs */
         _.each(_junkPerkMaps.legendaryArmor, (item) => {
@@ -136,7 +135,21 @@ function initJunkPerks(stores) {
                                     fcPerkNameEquiv = fcPerkNameEquiv + ' Aim';
                                 }
                                 var equivalentCombo = [fcPerkNameEquiv, combo[1]].join(',');
-                                junkPmByClass.unwantedBcGenericEtsPairs[equivalentCombo] = combo;
+                                if (!_.has(junkPmByClass.unwantedBcGenericEtsPairs, equivalentCombo)) {
+                                    junkPmByClass.unwantedBcGenericEtsPairs[equivalentCombo] = {
+                                        fivaPa: 0,
+                                        fourPa: 0,
+                                        fourPaIDs: [],
+                                        fivePaIDs: [],
+                                        combo: combo
+                                    };
+                                }
+                                var ids = junkPmByClass.unwantedBcGenericEtsPairs[equivalentCombo][isFourPa ? 'fourPaIDs' : 'fivePaIDs'];
+                                if (ids.indexOf(itemId) == -1) {
+                                    junkPmByClass.unwantedBcGenericEtsPairs[equivalentCombo][isFourPa ? 'fourPa' : 'fivePa']++;
+                                    ids.push(itemId);
+                                }
+
                             });
                             //console.log("combo", combo);
                             //unwantedBcGenericFastPairs[keyName] = keyName;
@@ -193,9 +206,6 @@ function initJunkPerks(stores) {
             );
             console.log('junkPmByClass', classTypeName, pmStats);
         });
-
-
-
 
         //console.log("armor items", _junkPerkMaps.itemTypeNameCounts);
         const perkMapStats = _.zipObject(
@@ -290,7 +300,11 @@ function junkPerkFilter(item, dupeReport) {
                 //if the item is a 5pa then it can only be replaced by another 5pa armor piece
                 if (!isFourPa && perkPairCount.fivePa >= 2) {
                     comboReasons.push(
-                        'Dupe Exp. Pair In Other 5PA (' + perkPairCount.fourPa + '/' + perkPairCount.fivePa + ')'
+                        'Dupe Exp. Pair In Other 5PA (' +
+                        perkPairCount.fourPa +
+                        '/' +
+                        perkPairCount.fivePa +
+                        ')'
                     );
                     return false;
                 }
@@ -326,29 +340,37 @@ function junkPerkFilter(item, dupeReport) {
                 comboReasons.push('Enhanced Pair Available');
                 return false;
             }
-            
+
             /* Generic ETS Available */
             //TODO: Check if 5PA item to ensure ETS is available in other 5PA only
             const hasGenericReplacement = _.has(junkPmByClass.unwantedBcGenericEtsPairs, comboString);
             if (hasGenericReplacement) {
-                const replacementCombo = junkPmByClass.unwantedBcGenericEtsPairs[comboString];
-                comboReasons.push('Generic ETS: ' + replacementCombo);
-                return false;
+                const replacementGenericEtsInfo = junkPmByClass.unwantedBcGenericEtsPairs[comboString];
+                const rplcInfoComboCount = ' - ' + replacementGenericEtsInfo.combo + '(' + replacementGenericEtsInfo.fourPa + '/' + replacementGenericEtsInfo.fivePa + ')';
+                if (isFourPa) {
+                    comboReasons.push('Generic ETS' + rplcInfoComboCount);
+                    return false;
+                } else if (!isFourPa && replacementGenericEtsInfo.fivePa >= 2) {
+                    comboReasons.push('Generic ETS w 5PA ' + rplcInfoComboCount);
+                    return false;
+                }
             }
-            
+
             /* Duplicate Perk */
             const perkPairCount = junkPmByClass.perkPairCount[comboString];
-            /*if (item.id == "6917529086278883300") {
-                      console.log("perkPairCount", perkPairCount, perkPairCount.fourPa > 2, perkPairCount.fivePa > 2);
-                  }*/
+
             // if the item has a replacement 4pa piece it needs another 4pa or 5pa replacement to be considered a dupe
             if (isFourPa && (perkPairCount.fourPa >= 2 || perkPairCount.fivePa >= 1)) {
-                comboReasons.push('Duplicate Pair (' + perkPairCount.fourPa + '/' + perkPairCount.fivePa + ')');
+                comboReasons.push(
+                    'Duplicate Pair (' + perkPairCount.fourPa + '/' + perkPairCount.fivePa + ')'
+                );
                 return false;
             }
             //if the item is a 5pa then it can only be replaced by another 5pa armor piece
             if (!isFourPa && perkPairCount.fivePa >= 2) {
-                comboReasons.push('Dupe In Other 5PA (' + perkPairCount.fourPa + '/' + perkPairCount.fivePa + ')');
+                comboReasons.push(
+                    'Dupe In Other 5PA (' + perkPairCount.fourPa + '/' + perkPairCount.fivePa + ')'
+                );
                 return false;
             }
 
