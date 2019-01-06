@@ -20,7 +20,12 @@ function initJunkPerks(stores) {
         (memo, store) => {
           // console.log("initJunkPerks-1", store.items.length);
           _.each(store.items, (item) => {
-            if (item.bucket.sort == 'Armor' && item.tier === 'Legendary' && (junkPerkPresets.skipTags.indexOf(item.tag) == -1 || junkPerkPresets.skipTags.length == 0)) {
+            if (
+              item.bucket.sort == 'Armor' &&
+              item.tier === 'Legendary' &&
+              (junkPerkPresets.skipTags.indexOf(item.dimInfo.tag) == -1 ||
+                junkPerkPresets.skipTags.length == 0)
+            ) {
               memo.push(item);
             }
           });
@@ -144,12 +149,16 @@ function initJunkPerks(stores) {
                     combo: combo
                   };
                 }
-                var ids = junkPmByClass.unwantedBcGenericEtsPairs[equivalentCombo][isFourPa ? 'fourPaIDs' : 'fivePaIDs'];
+                var ids =
+                  junkPmByClass.unwantedBcGenericEtsPairs[equivalentCombo][
+                    isFourPa ? 'fourPaIDs' : 'fivePaIDs'
+                  ];
                 if (ids.indexOf(itemId) == -1) {
-                  junkPmByClass.unwantedBcGenericEtsPairs[equivalentCombo][isFourPa ? 'fourPa' : 'fivePa']++;
+                  junkPmByClass.unwantedBcGenericEtsPairs[equivalentCombo][
+                    isFourPa ? 'fourPa' : 'fivePa'
+                  ]++;
                   ids.push(itemId);
                 }
-
               });
               //console.log("combo", combo);
               //unwantedBcGenericFastPairs[keyName] = keyName;
@@ -162,7 +171,7 @@ function initJunkPerks(stores) {
             junkPerkPresets.uniqueWeaponSlots.indexOf(fcPerkTag) > -1 &&
             junkPerkPresets.uniqueWeaponSlots.indexOf(scWeapon) > -1 &&
             junkPerkPresets.uniqueWeaponSlots.indexOf(fcPerkTag) !=
-            junkPerkPresets.uniqueWeaponSlots.indexOf(scWeapon)
+              junkPerkPresets.uniqueWeaponSlots.indexOf(scWeapon)
           ) {
             junkPmByClass.impossiblePerkPairs[comboString] = comboString;
           }
@@ -241,7 +250,8 @@ function junkPerkFilter(item, dupeReport) {
     // if the item is unique regardless of whether it has combos the preset determines it has to be kept
     const isUniqueAlwaysKeep = itemTypeNameCount === 1 && junkPerkPresets.keepUniqueAlways;
     // the item is unique but keepUniqueALways set to false so it needs to have combos (perk pairs) to be kept
-    const isUniqueNeedsComboToKeep = itemTypeNameCount === 1 && !junkPerkPresets.keepUniqueAlways && !hasArmorCombos;
+    const isUniqueNeedsComboToKeep =
+      itemTypeNameCount === 1 && !junkPerkPresets.keepUniqueAlways && !hasArmorCombos;
     /*if (item.id == "6917529087059658459") {
       console.log("isUniqueAlwaysKeep", isUniqueAlwaysKeep, "isUniqueNeedsComboToKeep", isUniqueNeedsComboToKeep);
     }*/
@@ -249,7 +259,6 @@ function junkPerkFilter(item, dupeReport) {
       //console.log("Skipping Unique Item", item.name, 'light:=' + item.Power, item.id, "No Armor Combos Available");
       return false;
     }
-
 
     // Only Y1 Armor has no perks to make this array zero so mark it for dismantle
     if (hasArmorCombos) {
@@ -266,8 +275,6 @@ function junkPerkFilter(item, dupeReport) {
       //console.log();
       return true;
     }
-
-
 
     //filter combos to the combos that are wanted
     const comboReasons = [];
@@ -314,10 +321,10 @@ function junkPerkFilter(item, dupeReport) {
         if (!isFourPa && perkPairCount.fivePa >= 2) {
           comboReasons.push(
             'Dupe Exp. Pair In Other 5PA (' +
-            perkPairCount.fourPa +
-            '/' +
-            perkPairCount.fivePa +
-            ')'
+              perkPairCount.fourPa +
+              '/' +
+              perkPairCount.fivePa +
+              ')'
           );
           return false;
         }
@@ -359,7 +366,14 @@ function junkPerkFilter(item, dupeReport) {
       const hasGenericReplacement = _.has(junkPmByClass.unwantedBcGenericEtsPairs, comboString);
       if (hasGenericReplacement) {
         const replacementGenericEtsInfo = junkPmByClass.unwantedBcGenericEtsPairs[comboString];
-        const rplcInfoComboCount = ' - ' + replacementGenericEtsInfo.combo + '(' + replacementGenericEtsInfo.fourPa + '/' + replacementGenericEtsInfo.fivePa + ')';
+        const rplcInfoComboCount =
+          ' - ' +
+          replacementGenericEtsInfo.combo +
+          '(' +
+          replacementGenericEtsInfo.fourPa +
+          '/' +
+          replacementGenericEtsInfo.fivePa +
+          ')';
         if (isFourPa) {
           comboReasons.push('Generic ETS' + rplcInfoComboCount);
           return false;
