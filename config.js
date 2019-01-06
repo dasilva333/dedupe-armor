@@ -1,5 +1,10 @@
 module.exports = {
+    //items that should not be included as part of the analysis
+    skipTags: ["junk"],
+    //items that should not be shown as having junk perks
     ignoreTags: ["keep", "favorite"],
+    //set this to true to always keep unique armor items even if it's a year 1 item
+    keepUniqueAlways: false,
     //unwanted individual single perks (any column)
     unwantedPerks: [
       //these archetypes have plenty of ammo so very rare to need to scavenge/reserve it

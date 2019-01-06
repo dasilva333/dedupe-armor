@@ -20,7 +20,7 @@ function initJunkPerks(stores) {
                 (memo, store) => {
                     // console.log("initJunkPerks-1", store.items.length);
                     _.each(store.items, (item) => {
-                        if (item.bucket.sort == 'Armor' && item.tier === 'Legendary') {
+                        if (item.bucket.sort == 'Armor' && item.tier === 'Legendary' && (junkPerkPresets.skipTags.indexOf(item.tag) == -1 || junkPerkPresets.skipTags.length == 0)) {
                             memo.push(item);
                         }
                     });
@@ -234,8 +234,22 @@ function junkPerkFilter(item, dupeReport) {
         const junkPmByClass = _junkPerkMaps.statsByClassName[item.classTypeName];
         const armorCombos = junkPmByClass.armorCombos[item.id];
 
+        const hasArmorCombos = !armorCombos || (armorCombos && armorCombos.length === 0);
+
+        // look up the count of instance of that item by type/name
+        const itemTypeNameCount = junkPmByClass.itemTypeNameCounts[item.type][item.name];
+        // if the item is unique regardless of whether it has combos the preset determines it has to be kept
+        const isUniqueAlwaysKeep = itemTypeNameCount === 1 && junkPerkPresets.keepUniqueAlways;
+        // the item is unique but keepUniqueALways set to false so it needs to have combos (perk pairs) to be kept
+        const isUniqueNeedsComboToKeep = itemTypeNameCount === 1 && !junkPerkPresets.keepUniqueAlways && hasArmorCombos;
+        if (isUniqueAlwaysKeep || isUniqueNeedsComboToKeep) {
+            //console.log("Skipping Unique Item", item.name, 'light:=' + item.Power, item.id, "No Armor Combos Available");
+            return false;
+        }
+
+
         // Only Y1 Armor has no perks to make this array zero so mark it for dismantle
-        if (!armorCombos || (armorCombos && armorCombos.length === 0)) {
+        if (hasArmorCombos) {
             dupeReport.push(
                 [
                     item.classTypeName,
@@ -250,12 +264,8 @@ function junkPerkFilter(item, dupeReport) {
             return true;
         }
 
-        // if the item is unique by type/name then regardless of anything else, keep it to ensure a full set is available
-        var itemTypeNameCount = junkPmByClass.itemTypeNameCounts[item.type][item.name];
-        if (itemTypeNameCount === 1) {
-            //console.log("Skipping Unique Item", item.name, 'light:=' + item.Power, item.id, "No Armor Combos Available");
-            return false;
-        }
+
+
         //filter combos to the combos that are wanted
         const comboReasons = [];
 
