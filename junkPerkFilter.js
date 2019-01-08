@@ -263,14 +263,15 @@ function junkPerkFilter(item, dupeReport) {
     // Only Y1 Armor has no perks to make this array zero so mark it for dismantle
     if (hasArmorCombos) {
       dupeReport.push(
-        [
-          item.classTypeName,
-          item.bucket.type,
-          item.name,
-          'light:=' + item.basePower,
-          item.id,
-          'Reason: No Armor Combos Available'
-        ].join(' ')
+        {
+        classText: item.classTypeName,
+          type: item.bucket.type,
+          name: item.name,
+          power: item.basePower,
+          id: item.id,
+          reason: 'Reason: No Armor Combos Available',
+          reasons: []
+        }
       );
       //console.log();
       return true;
@@ -412,24 +413,25 @@ function junkPerkFilter(item, dupeReport) {
 
     // if the item has no wanted combos then it can safely be dismantled
     if (wantedCombos.length == 0) {
-      let dupeText = [];
-      //console.log("unwantedItem", item.name, 'light:=' + item.Power, item.id, armorCombos, comboReasons);
-      dupeText.push(
-        [
-          item.classTypeName,
-          item.bucket.type,
-          item.name,
-          'light:=' + item.basePower,
-          item.id,
-          'Reason: No Wanted Combos'
-        ].join(' ')
-      );
+        const lines = [];
       _.each(armorCombos, (combo, index) => {
         var reason = comboReasons[index];
-        dupeText.push('"' + combo.join('" "') + '" - ' + reason);
+        lines.push({
+            combo: combo,
+            reason: reason
+        });
       });
-      dupeText.push('');
-      dupeReport.push(dupeText.join('\n'));
+      dupeReport.push(
+        {
+          classText: item.classTypeName,
+          type: item.bucket.type,
+          name: item.name,
+          power: item.basePower,
+          id: item.id,
+          reason: 'Reason: No Wanted Combos',
+          reasons: lines
+        }
+      );
       return true;
     }
   }

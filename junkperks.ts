@@ -25,9 +25,20 @@ _.each(_junkPerkMaps.legendaryArmor, function (armorItem) {
 });
 
 var totalCount = "total junk items:" + dupeReport.length + "\n\n";
-console.log(totalCount);
-dupeReport = _.sortBy(dupeReport);
-fs.writeFileSync("report-v2.txt", totalCount + dupeReport.join("\n"));
+
+var junkItemTemplate = "<%= classText %> <%= type %> <%= name %> light:=<%= power %> <%= id %> <%= reason %>";
+var junkReasonTemplate = '"<%= combo[0] %>" "<%= combo[1] %>" - <%= reason %>';
+
+var compiledJunkItemTemplate = _.template(junkItemTemplate);
+var compiledJunkReasonTemplate = _.template(junkReasonTemplate);
+
+dupeReport = _.map(_.sortBy(dupeReport), (junkItem) => {
+    return compiledJunkItemTemplate(junkItem) + "\n" + _.map(junkItem.reasons, (junkItemReason) => {
+        return compiledJunkReasonTemplate(junkItemReason) + "\n";
+    }).join("");
+}).join("\n");
+fs.writeFileSync("report-v2.txt", totalCount + dupeReport);
+fs.writeFileSync("report-json.txt", JSON.stringify(dupeReport, null, 4));
 
 //console.log(dupeReport.join("\n"));
 //console.log("junkPerkPresets",placeholderItem);
