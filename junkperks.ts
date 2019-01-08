@@ -26,11 +26,8 @@ _.each(_junkPerkMaps.legendaryArmor, function (armorItem) {
 
 var totalCount = "total junk items:" + dupeReport.length + "\n\n";
 
-var junkItemTemplate = "<%= classText %> <%= type %> <%= name %> light:=<%= power %> <%= id %> <%= reason %>";
-var junkReasonTemplate = '"<%= combo[0] %>" "<%= combo[1] %>" - <%= reason %>';
-
-var compiledJunkItemTemplate = _.template(junkItemTemplate);
-var compiledJunkReasonTemplate = _.template(junkReasonTemplate);
+var compiledJunkItemTemplate = _.template(jpf.junkPerkConfig.junkItemTemplate);
+var compiledJunkReasonTemplate = _.template(jpf.junkPerkConfig.junkReasonTemplate);
 
 dupeReport = _.map(_.sortBy(dupeReport), (junkItem) => {
     return compiledJunkItemTemplate(junkItem) + "\n" + _.map(junkItem.reasons, (junkItemReason) => {

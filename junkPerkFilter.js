@@ -171,7 +171,7 @@ function initJunkPerks(stores) {
             junkPerkPresets.uniqueWeaponSlots.indexOf(fcPerkTag) > -1 &&
             junkPerkPresets.uniqueWeaponSlots.indexOf(scWeapon) > -1 &&
             junkPerkPresets.uniqueWeaponSlots.indexOf(fcPerkTag) !=
-              junkPerkPresets.uniqueWeaponSlots.indexOf(scWeapon)
+            junkPerkPresets.uniqueWeaponSlots.indexOf(scWeapon)
           ) {
             junkPmByClass.impossiblePerkPairs[comboString] = comboString;
           }
@@ -262,17 +262,15 @@ function junkPerkFilter(item, dupeReport) {
 
     // Only Y1 Armor has no perks to make this array zero so mark it for dismantle
     if (hasArmorCombos) {
-      dupeReport.push(
-        {
+      dupeReport.push({
         classText: item.classTypeName,
-          type: item.bucket.type,
-          name: item.name,
-          power: item.basePower,
-          id: item.id,
-          reason: 'Reason: No Armor Combos Available',
-          reasons: []
-        }
-      );
+        type: item.bucket.type,
+        name: item.name,
+        power: item.basePower,
+        id: item.id,
+        reason: 'Reason: No Armor Combos Available',
+        reasons: []
+      });
       //console.log();
       return true;
     }
@@ -322,10 +320,10 @@ function junkPerkFilter(item, dupeReport) {
         if (!isFourPa && perkPairCount.fivePa >= 2) {
           comboReasons.push(
             'Dupe Exp. Pair In Other 5PA (' +
-              perkPairCount.fourPa +
-              '/' +
-              perkPairCount.fivePa +
-              ')'
+            perkPairCount.fourPa +
+            '/' +
+            perkPairCount.fivePa +
+            ')'
           );
           return false;
         }
@@ -413,25 +411,23 @@ function junkPerkFilter(item, dupeReport) {
 
     // if the item has no wanted combos then it can safely be dismantled
     if (wantedCombos.length == 0) {
-        const lines = [];
+      const lines = [];
       _.each(armorCombos, (combo, index) => {
         var reason = comboReasons[index];
         lines.push({
-            combo: combo,
-            reason: reason
+          combo: combo,
+          reason: reason
         });
       });
-      dupeReport.push(
-        {
-          classText: item.classTypeName,
-          type: item.bucket.type,
-          name: item.name,
-          power: item.basePower,
-          id: item.id,
-          reason: 'Reason: No Wanted Combos',
-          reasons: lines
-        }
-      );
+      dupeReport.push({
+        classText: item.classTypeName,
+        type: item.bucket.type,
+        name: item.name,
+        power: item.basePower,
+        id: item.id,
+        reason: 'Reason: No Wanted Combos',
+        reasons: lines
+      });
       return true;
     }
   }
@@ -443,5 +439,6 @@ function junkPerkFilter(item, dupeReport) {
 
 module.exports = {
   initJunkPerks: initJunkPerks,
-  junkPerkFilter: junkPerkFilter
+  junkPerkFilter: junkPerkFilter,
+  junkPerkConfig: junkPerkPresets
 };
