@@ -1,79 +1,55 @@
-total junk items:11
+total junk items:13
 
-hunter Chest Armor "Red Moon Phantom Vest" light:=650 6917529069300791933 Reason: No Wanted Combos
-"Unflinching Energy Aim" "Sidearm Reserves" - Duplicate Pair (2/0)
-"Unflinching Energy Aim" "Scout Rifle Reserves" - Unwanted Perk
-"Unflinching Auto Rifle Aim" "Sidearm Reserves" - Generic ETS - Unflinching Rifle Aim,Sidearm Reserves(0/1)
-"Unflinching Auto Rifle Aim" "Scout Rifle Reserves" - Unwanted Perk
+hunter Gauntlets Wildwood Grips light:=631 """6917529087396867322""" Reason: No Armor Combos Available
 
-hunter Chest Armor "Iron Fellowship Vest" light:=631 6917529086622603010 Reason: No Wanted Combos
-"Unflinching Submachine Gun Aim" "Scout Rifle Reserves" - Unwanted Perk
-"Unflinching Submachine Gun Aim" "Hand Cannon Reserves" - Generic ETS - Unflinching Light Arms Aim,Hand Cannon Reserves(0/1)
-"Unflinching Auto Rifle Aim" "Scout Rifle Reserves" - Unwanted Perk
-"Unflinching Auto Rifle Aim" "Hand Cannon Reserves" - Duplicate Pair (1/1)
+hunter Chest Armor Wildwood Vest light:=631 """6917529087396862492""" Reason: No Armor Combos Available
 
-hunter Chest Armor "Iron Fellowship Vest" light:=650 6917529086264857529 Reason: No Wanted Combos
-"Unflinching Hand Cannon Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/0)
-"Unflinching Hand Cannon Aim" "Sidearm Reserves" - Generic ETS - Unflinching Light Arms Aim,Sidearm Reserves(0/1)
-"Unflinching Auto Rifle Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Rifle Aim,Submachine Gun Reserves(1/0)
-"Unflinching Auto Rifle Aim" "Sidearm Reserves" - Generic ETS - Unflinching Rifle Aim,Sidearm Reserves(0/1)
+hunter Chest Armor Insight Rover Vest light:=631 """6917529087396865845""" Reason: No Armor Combos Available
 
-hunter Hunter Cloak "Reverie Dawn Cloak" light:=635 6917529086781628484 Reason: No Wanted Combos
-"Better Already" "Linear Fusion Rifle Scavenger" - Dupe In Other 5PA (3/2)
-"Better Already" "Grenade Launcher Reserves" - Dupe In Other 5PA (0/3)
-"Invigoration" "Linear Fusion Rifle Scavenger" - Unwanted Perk
-"Invigoration" "Grenade Launcher Reserves" - Unwanted Perk
-"Insulation" "Linear Fusion Rifle Scavenger" - Dupe In Other 5PA (1/3)
-"Insulation" "Grenade Launcher Reserves" - Dupe In Other 5PA (0/2)
+hunter Leg Armor Dead End Cure 2.1 light:=631 """6917529087396868179""" Reason: No Armor Combos Available
 
-hunter Chest Armor "Reverie Dawn Hauberk" light:=631 6917529086698356345 Reason: No Wanted Combos
-"Enhanced Unflinching Linear Fusion Aim" "Special Ammo Finder" - Dupe In Other 5PA (0/2)
-"Enhanced Unflinching Linear Fusion Aim" "Bow Reserves" - Unwanted Perk
-"Enhanced Unflinching Bow Aim" "Special Ammo Finder" - Dupe In Other 5PA (0/2)
-"Enhanced Unflinching Bow Aim" "Bow Reserves" - Unwanted Perk
-"Unflinching Large Arms" "Special Ammo Finder" - Dupe In Other 5PA (0/3)
-"Unflinching Large Arms" "Bow Reserves" - Unwanted Perk
+hunter Hunter Cloak Clandestine Maneuvers light:=631 """6917529087391036430""" Reason: No Armor Combos Available
 
-hunter Chest Armor "Reverie Dawn Hauberk" light:=609 6917529073852053305 Reason: No Wanted Combos
-"Unflinching Power Aim" "Submachine Gun Reserves" - Unwanted Perk
-"Unflinching Power Aim" "Sidearm Reserves" - Unwanted Perk
-"Unflinching Hand Cannon Aim" "Submachine Gun Reserves" - Dupe In Other 5PA (1/3)
-"Unflinching Hand Cannon Aim" "Sidearm Reserves" - Dupe In Other 5PA (1/2)
-"Unflinching Bow Aim" "Submachine Gun Reserves" - Enhanced Pair Available
-"Unflinching Bow Aim" "Sidearm Reserves" - Dupe In Other 5PA (1/2)
-
-hunter Hunter Cloak "Reverie Dawn Cloak" light:=600 6917529082662988641 Reason: No Wanted Combos
-"Better Already" "Special Ammo Finder" - Dupe In Other 5PA (0/2)
-"Better Already" "Linear Fusion Rifle Scavenger" - Dupe In Other 5PA (3/2)
-"Invigoration" "Special Ammo Finder" - Unwanted Perk
-"Invigoration" "Linear Fusion Rifle Scavenger" - Unwanted Perk
-"Insulation" "Special Ammo Finder" - Dupe In Other 5PA (0/3)
-"Insulation" "Linear Fusion Rifle Scavenger" - Dupe In Other 5PA (1/3)
-
-hunter Chest Armor "Reverie Dawn Hauberk" light:=630 6917529084913815929 Reason: No Wanted Combos
-"Enhanced Unflinching Linear Fusion Aim" "Special Ammo Finder" - Dupe In Other 5PA (0/2)
-"Enhanced Unflinching Linear Fusion Aim" "Auto Rifle Reserves" - Unwanted Perk
-"Unflinching Light Arms Aim" "Special Ammo Finder" - Dupe In Other 5PA (1/2)
-"Unflinching Light Arms Aim" "Auto Rifle Reserves" - Unwanted Perk
-"Unflinching Sidearm Aim" "Special Ammo Finder" - Generic ETS w 5PA  - Unflinching Light Arms Aim,Special Ammo Finder(1/2)
-"Unflinching Sidearm Aim" "Auto Rifle Reserves" - Unwanted Perk
-
-hunter Chest Armor "Wing Contender" light:=650 6917529086384902245 Reason: No Wanted Combos
-"Unflinching Linear Fusion Aim" "Special Ammo Finder" - Enhanced Pair Available
-"Unflinching Linear Fusion Aim" "Bow Reserves" - Unwanted Perk
-"Unflinching Hand Cannon Aim" "Special Ammo Finder" - Generic ETS - Unflinching Light Arms Aim,Special Ammo Finder(1/2)
-"Unflinching Hand Cannon Aim" "Bow Reserves" - Unwanted Perk
-
-hunter Gauntlets "Reverie Dawn Grasps" light:=614 6917529084534586601 Reason: No Wanted Combos
-"Fastball" "Shotgun Scavenger" - Dupe In Other 5PA (0/2)
-"Fastball" "Rocket Launcher Scavenger" - Dupe In Other 5PA (0/2)
-"Hand Cannon Loader" "Shotgun Scavenger" - Dupe In Other 5PA (0/2)
-"Hand Cannon Loader" "Rocket Launcher Scavenger" - Dupe In Other 5PA (0/2)
-"Bow Reloader" "Shotgun Scavenger" - Unwanted Perk
-"Bow Reloader" "Rocket Launcher Scavenger" - Unwanted Perk
-
-hunter Chest Armor "Wing Contender" light:=650 6917529086278883300 Reason: No Wanted Combos
-"Unflinching Light Arms Aim" "Special Ammo Finder" - Duplicate Pair (1/2)
+hunter Chest Armor Wing Contender light:=650 """6917529086278883300""" Reason: No Wanted Combos
+"Unflinching Light Arms Aim" "Special Ammo Finder" - Duplicate Pair (2/2)
 "Unflinching Light Arms Aim" "Submachine Gun Reserves" - Duplicate Pair (2/0)
 "Unflinching Fusion Rifle Aim" "Special Ammo Finder" - Generic ETS - Unflinching Rifle Aim,Special Ammo Finder(1/0)
 "Unflinching Fusion Rifle Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Rifle Aim,Submachine Gun Reserves(1/0)
+
+hunter Helmet Woven Firesmith Mask light:=650 """6917529087306859922""" Reason: No Wanted Combos
+"Shotgun Targeting" "Special Ammo Finder" - Duplicate Pair (1/1)
+"Shotgun Targeting" "Linear Fusion Rifle Reserves" - Duplicate Pair (1/2)
+"Auto Rifle Targeting" "Special Ammo Finder" - Generic ETS - Scatter Projectile Targeting,Special Ammo Finder(0/1)
+"Auto Rifle Targeting" "Linear Fusion Rifle Reserves" - Generic ETS - Scatter Projectile Targeting,Linear Fusion Rifle Reserves(0/2)
+
+hunter Helmet Qiao's Grin light:=630 """6917529087059658459""" Reason: No Armor Combos Available
+
+hunter Hunter Cloak Wing Contender light:=650 """6917529087180086665""" Reason: No Wanted Combos
+"Recuperation" "Sword Scavenger" - Duplicate Pair (2/0)
+"Recuperation" "Fusion Rifle Scavenger" - Duplicate Pair (1/1)
+"Invigoration" "Sword Scavenger" - Unwanted Perk
+"Invigoration" "Fusion Rifle Scavenger" - Unwanted Perk
+
+hunter Chest Armor Tangled Web Vest light:=650 """6917529087005250671""" Reason: No Wanted Combos
+"Unflinching Submachine Gun Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/0)
+"Unflinching Submachine Gun Aim" "Auto Rifle Reserves" - Unwanted Perk
+"Unflinching Sidearm Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/0)
+"Unflinching Sidearm Aim" "Auto Rifle Reserves" - Unwanted Perk
+
+hunter Chest Armor Wing Contender light:=650 """6917529086384902245""" Reason: No Wanted Combos
+"Unflinching Linear Fusion Aim" "Special Ammo Finder" - Enhanced Pair Available
+"Unflinching Linear Fusion Aim" "Bow Reserves" - Unwanted Perk
+"Unflinching Hand Cannon Aim" "Special Ammo Finder" - Generic ETS - Unflinching Light Arms Aim,Special Ammo Finder(2/2)
+"Unflinching Hand Cannon Aim" "Bow Reserves" - Unwanted Perk
+
+hunter Chest Armor Ancient Apocalypse Vest light:=650 """6917529087387818374""" Reason: No Wanted Combos
+"Unflinching Large Arms" "Hand Cannon Reserves" - Duplicate Pair (2/3)
+"Unflinching Large Arms" "Bow Reserves" - Unwanted Perk
+"Unflinching Scout Rifle Aim" "Hand Cannon Reserves" - Duplicate Pair (2/0)
+"Unflinching Scout Rifle Aim" "Bow Reserves" - Unwanted Perk
+
+hunter Chest Armor Woven Firesmith Vest light:=650 """6917529087327917862""" Reason: No Wanted Combos
+"Unflinching Light Arms Aim" "Special Ammo Finder" - Duplicate Pair (2/2)
+"Unflinching Light Arms Aim" "Pulse Rifle Reserves" - Unwanted Perk
+"Unflinching Kinetic Aim" "Special Ammo Finder" - Duplicate Pair (1/1)
+"Unflinching Kinetic Aim" "Pulse Rifle Reserves" - Unwanted Perk

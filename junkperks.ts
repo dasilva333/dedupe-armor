@@ -6,7 +6,7 @@ const stores = require("./dimStorageShim");
 /* this is placeholder items to have a reference native DIM object available 
 const placeholderFivePa = require("./dimFivePaShim");
 const placeholderFourPa = require("./dimFourPaShim"); */
-
+//return console.log("item", stores[0].items[0])
 const jpf = require("./junkPerkFilter.js");
 
 let _junkPerkMaps = jpf.initJunkPerks(stores);
@@ -37,5 +37,5 @@ dupeReport = _.map(_.sortBy(dupeReport), (junkItem) => {
 fs.writeFileSync("report-v2.txt", totalCount + dupeReport);
 fs.writeFileSync("report-json.txt", JSON.stringify(dupeReport, null, 4));
 
-//console.log(dupeReport.join("\n"));
+console.log(totalCount);
 //console.log("junkPerkPresets",placeholderItem);

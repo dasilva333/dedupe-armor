@@ -17,29 +17,31 @@ var items = armorData.map(function (row) {
         };        
     });
     //perks have a special case
-    var perks = _.find(results, {
-        label: "Perks"
-    });
-    if (perks) {
-        //turn the current value into an array
-        perks.value = [perks.value.replace("*", "")];
-        //console.log("perks", perks)
-        //append the rest of the perks to that array
-        _.each(results.reverse(), function (perk, index) {
-            if (perk.label == undefined) {
-                //console.log("perk", perk, index);
-                perks.value.push(perk.value.replace("*", ""));
-                delete results[index];
-            }
-        });
-        armorPerks = _.clone(perks);
+    var perks = _.map(_.filter(results, function(item){
+        //console.log("item", item.label);
+        return item.label.indexOf("Perks") > -1 && item.value != '' && item.value != '\r';
+    }),'value');
+    //console.log("perks", perks);
+    if (perks.length) {
+        //remap the object to something compatible with the rest of the code
+        perksObject = {
+            label: "Perks",
+            //remove the asterisk denoting it's the active perk, reverse the array to make the shader last in the array
+            value: _.map(perks, function(perk){
+                return perk.replace("*", "").replace("\r", "");
+            }).reverse()
+        };
+        
+        armorPerks = _.clone(perksObject);
         armorPerks.label = "Armor Perks";
+        //Inconsistent and limited way of limiting to only armor perks
         armorPerks.value = _.filter(armorPerks.value, function (perk) {
             var parts = perk.split(" ");
             var lastWord = parts[parts.length - 1];
             //console.log("perk", lastWord, filteredPerks.indexOf(lastWord), lastWord.indexOf(filteredPerks));
             return filteredPerks.indexOf(lastWord) == -1;
         });
+        //if the amount of perks is 6 that means it's ....
         if (armorPerks.value.length == 6) {
             armorPerks.value.pop();
         }
@@ -49,6 +51,8 @@ var items = armorData.map(function (row) {
         if (name.indexOf("reverie") == -1 && name.indexOf("great hunt") == -1 && armorPerks.value.length == 5) {
             armorPerks.value.pop();
         }
+        //console.log("armorPerks", armorPerks.value);
+        //console.log("")
         results.push(armorPerks);
         var armorCombos = _.clone(armorPerks);
         armorCombos.label = "Armor Combinations";
@@ -89,6 +93,7 @@ var items = armorData.map(function (row) {
         sort: "Armor",
         type: item.Type
     }
+    
     return item;
 });
 
