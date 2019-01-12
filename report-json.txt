@@ -1,1 +1,322 @@
-"hunter Gauntlets Wildwood Grips light:=631 \"\"\"6917529087396867322\"\"\" Reason: No Armor Combos Available\n\nhunter Chest Armor Wildwood Vest light:=631 \"\"\"6917529087396862492\"\"\" Reason: No Armor Combos Available\n\nhunter Chest Armor Insight Rover Vest light:=631 \"\"\"6917529087396865845\"\"\" Reason: No Armor Combos Available\n\nhunter Leg Armor Dead End Cure 2.1 light:=631 \"\"\"6917529087396868179\"\"\" Reason: No Armor Combos Available\n\nhunter Hunter Cloak Clandestine Maneuvers light:=631 \"\"\"6917529087391036430\"\"\" Reason: No Armor Combos Available\n\nhunter Chest Armor Wing Contender light:=650 \"\"\"6917529086278883300\"\"\" Reason: No Wanted Combos\n\"Unflinching Light Arms Aim\" \"Special Ammo Finder\" - Duplicate Pair (2/2)\n\"Unflinching Light Arms Aim\" \"Submachine Gun Reserves\" - Duplicate Pair (2/0)\n\"Unflinching Fusion Rifle Aim\" \"Special Ammo Finder\" - Generic ETS - Unflinching Rifle Aim,Special Ammo Finder(1/0)\n\"Unflinching Fusion Rifle Aim\" \"Submachine Gun Reserves\" - Generic ETS - Unflinching Rifle Aim,Submachine Gun Reserves(1/0)\n\nhunter Helmet Woven Firesmith Mask light:=650 \"\"\"6917529087306859922\"\"\" Reason: No Wanted Combos\n\"Shotgun Targeting\" \"Special Ammo Finder\" - Duplicate Pair (1/1)\n\"Shotgun Targeting\" \"Linear Fusion Rifle Reserves\" - Duplicate Pair (1/2)\n\"Auto Rifle Targeting\" \"Special Ammo Finder\" - Generic ETS - Scatter Projectile Targeting,Special Ammo Finder(0/1)\n\"Auto Rifle Targeting\" \"Linear Fusion Rifle Reserves\" - Generic ETS - Scatter Projectile Targeting,Linear Fusion Rifle Reserves(0/2)\n\nhunter Helmet Qiao's Grin light:=630 \"\"\"6917529087059658459\"\"\" Reason: No Armor Combos Available\n\nhunter Hunter Cloak Wing Contender light:=650 \"\"\"6917529087180086665\"\"\" Reason: No Wanted Combos\n\"Recuperation\" \"Sword Scavenger\" - Duplicate Pair (2/0)\n\"Recuperation\" \"Fusion Rifle Scavenger\" - Duplicate Pair (1/1)\n\"Invigoration\" \"Sword Scavenger\" - Unwanted Perk\n\"Invigoration\" \"Fusion Rifle Scavenger\" - Unwanted Perk\n\nhunter Chest Armor Tangled Web Vest light:=650 \"\"\"6917529087005250671\"\"\" Reason: No Wanted Combos\n\"Unflinching Submachine Gun Aim\" \"Submachine Gun Reserves\" - Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/0)\n\"Unflinching Submachine Gun Aim\" \"Auto Rifle Reserves\" - Unwanted Perk\n\"Unflinching Sidearm Aim\" \"Submachine Gun Reserves\" - Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/0)\n\"Unflinching Sidearm Aim\" \"Auto Rifle Reserves\" - Unwanted Perk\n\nhunter Chest Armor Wing Contender light:=650 \"\"\"6917529086384902245\"\"\" Reason: No Wanted Combos\n\"Unflinching Linear Fusion Aim\" \"Special Ammo Finder\" - Enhanced Pair Available\n\"Unflinching Linear Fusion Aim\" \"Bow Reserves\" - Unwanted Perk\n\"Unflinching Hand Cannon Aim\" \"Special Ammo Finder\" - Generic ETS - Unflinching Light Arms Aim,Special Ammo Finder(2/2)\n\"Unflinching Hand Cannon Aim\" \"Bow Reserves\" - Unwanted Perk\n\nhunter Chest Armor Ancient Apocalypse Vest light:=650 \"\"\"6917529087387818374\"\"\" Reason: No Wanted Combos\n\"Unflinching Large Arms\" \"Hand Cannon Reserves\" - Duplicate Pair (2/3)\n\"Unflinching Large Arms\" \"Bow Reserves\" - Unwanted Perk\n\"Unflinching Scout Rifle Aim\" \"Hand Cannon Reserves\" - Duplicate Pair (2/0)\n\"Unflinching Scout Rifle Aim\" \"Bow Reserves\" - Unwanted Perk\n\nhunter Chest Armor Woven Firesmith Vest light:=650 \"\"\"6917529087327917862\"\"\" Reason: No Wanted Combos\n\"Unflinching Light Arms Aim\" \"Special Ammo Finder\" - Duplicate Pair (2/2)\n\"Unflinching Light Arms Aim\" \"Pulse Rifle Reserves\" - Unwanted Perk\n\"Unflinching Kinetic Aim\" \"Special Ammo Finder\" - Duplicate Pair (1/1)\n\"Unflinching Kinetic Aim\" \"Pulse Rifle Reserves\" - Unwanted Perk\n"
+[
+    {
+        "classText": "hunter",
+        "type": "Chest Armor",
+        "name": "Wildwood Vest",
+        "power": "631",
+        "id": "\"\"\"6917529087396862492\"\"\"",
+        "reason": "Reason: No Armor Combos Available",
+        "reasons": []
+    },
+    {
+        "classText": "hunter",
+        "type": "Chest Armor",
+        "name": "Insight Rover Vest",
+        "power": "631",
+        "id": "\"\"\"6917529087396865845\"\"\"",
+        "reason": "Reason: No Armor Combos Available",
+        "reasons": []
+    },
+    {
+        "classText": "hunter",
+        "type": "Chest Armor",
+        "name": "Wing Contender",
+        "power": "650",
+        "id": "\"\"\"6917529086278883300\"\"\"",
+        "reason": "Reason: No Wanted Combos",
+        "reasons": [
+            {
+                "combo": [
+                    "Unflinching Light Arms Aim",
+                    "Special Ammo Finder"
+                ],
+                "reason": "Duplicate Pair (2/2)"
+            },
+            {
+                "combo": [
+                    "Unflinching Light Arms Aim",
+                    "Submachine Gun Reserves"
+                ],
+                "reason": "Duplicate Pair (2/0)"
+            },
+            {
+                "combo": [
+                    "Unflinching Fusion Rifle Aim",
+                    "Special Ammo Finder"
+                ],
+                "reason": "Generic ETS - Unflinching Rifle Aim,Special Ammo Finder(1/0)"
+            },
+            {
+                "combo": [
+                    "Unflinching Fusion Rifle Aim",
+                    "Submachine Gun Reserves"
+                ],
+                "reason": "Generic ETS - Unflinching Rifle Aim,Submachine Gun Reserves(1/0)"
+            }
+        ]
+    },
+    {
+        "classText": "hunter",
+        "type": "Chest Armor",
+        "name": "Tangled Web Vest",
+        "power": "650",
+        "id": "\"\"\"6917529087005250671\"\"\"",
+        "reason": "Reason: No Wanted Combos",
+        "reasons": [
+            {
+                "combo": [
+                    "Unflinching Submachine Gun Aim",
+                    "Submachine Gun Reserves"
+                ],
+                "reason": "Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/0)"
+            },
+            {
+                "combo": [
+                    "Unflinching Submachine Gun Aim",
+                    "Auto Rifle Reserves"
+                ],
+                "reason": "Unwanted Perk"
+            },
+            {
+                "combo": [
+                    "Unflinching Sidearm Aim",
+                    "Submachine Gun Reserves"
+                ],
+                "reason": "Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/0)"
+            },
+            {
+                "combo": [
+                    "Unflinching Sidearm Aim",
+                    "Auto Rifle Reserves"
+                ],
+                "reason": "Unwanted Perk"
+            }
+        ]
+    },
+    {
+        "classText": "hunter",
+        "type": "Chest Armor",
+        "name": "Wing Contender",
+        "power": "650",
+        "id": "\"\"\"6917529086384902245\"\"\"",
+        "reason": "Reason: No Wanted Combos",
+        "reasons": [
+            {
+                "combo": [
+                    "Unflinching Linear Fusion Aim",
+                    "Special Ammo Finder"
+                ],
+                "reason": "Enhanced Pair Available"
+            },
+            {
+                "combo": [
+                    "Unflinching Linear Fusion Aim",
+                    "Bow Reserves"
+                ],
+                "reason": "Unwanted Perk"
+            },
+            {
+                "combo": [
+                    "Unflinching Hand Cannon Aim",
+                    "Special Ammo Finder"
+                ],
+                "reason": "Generic ETS - Unflinching Light Arms Aim,Special Ammo Finder(2/2)"
+            },
+            {
+                "combo": [
+                    "Unflinching Hand Cannon Aim",
+                    "Bow Reserves"
+                ],
+                "reason": "Unwanted Perk"
+            }
+        ]
+    },
+    {
+        "classText": "hunter",
+        "type": "Chest Armor",
+        "name": "Ancient Apocalypse Vest",
+        "power": "650",
+        "id": "\"\"\"6917529087387818374\"\"\"",
+        "reason": "Reason: No Wanted Combos",
+        "reasons": [
+            {
+                "combo": [
+                    "Unflinching Large Arms",
+                    "Hand Cannon Reserves"
+                ],
+                "reason": "Duplicate Pair (2/3)"
+            },
+            {
+                "combo": [
+                    "Unflinching Large Arms",
+                    "Bow Reserves"
+                ],
+                "reason": "Unwanted Perk"
+            },
+            {
+                "combo": [
+                    "Unflinching Scout Rifle Aim",
+                    "Hand Cannon Reserves"
+                ],
+                "reason": "Duplicate Pair (2/0)"
+            },
+            {
+                "combo": [
+                    "Unflinching Scout Rifle Aim",
+                    "Bow Reserves"
+                ],
+                "reason": "Unwanted Perk"
+            }
+        ]
+    },
+    {
+        "classText": "hunter",
+        "type": "Chest Armor",
+        "name": "Woven Firesmith Vest",
+        "power": "650",
+        "id": "\"\"\"6917529087327917862\"\"\"",
+        "reason": "Reason: No Wanted Combos",
+        "reasons": [
+            {
+                "combo": [
+                    "Unflinching Light Arms Aim",
+                    "Special Ammo Finder"
+                ],
+                "reason": "Duplicate Pair (2/2)"
+            },
+            {
+                "combo": [
+                    "Unflinching Light Arms Aim",
+                    "Pulse Rifle Reserves"
+                ],
+                "reason": "Unwanted Perk"
+            },
+            {
+                "combo": [
+                    "Unflinching Kinetic Aim",
+                    "Special Ammo Finder"
+                ],
+                "reason": "Duplicate Pair (1/1)"
+            },
+            {
+                "combo": [
+                    "Unflinching Kinetic Aim",
+                    "Pulse Rifle Reserves"
+                ],
+                "reason": "Unwanted Perk"
+            }
+        ]
+    },
+    {
+        "classText": "hunter",
+        "type": "Gauntlets",
+        "name": "Wildwood Grips",
+        "power": "631",
+        "id": "\"\"\"6917529087396867322\"\"\"",
+        "reason": "Reason: No Armor Combos Available",
+        "reasons": []
+    },
+    {
+        "classText": "hunter",
+        "type": "Helmet",
+        "name": "Woven Firesmith Mask",
+        "power": "650",
+        "id": "\"\"\"6917529087306859922\"\"\"",
+        "reason": "Reason: No Wanted Combos",
+        "reasons": [
+            {
+                "combo": [
+                    "Shotgun Targeting",
+                    "Special Ammo Finder"
+                ],
+                "reason": "Duplicate Pair (1/1)"
+            },
+            {
+                "combo": [
+                    "Shotgun Targeting",
+                    "Linear Fusion Rifle Reserves"
+                ],
+                "reason": "Duplicate Pair (1/2)"
+            },
+            {
+                "combo": [
+                    "Auto Rifle Targeting",
+                    "Special Ammo Finder"
+                ],
+                "reason": "Generic ETS - Scatter Projectile Targeting,Special Ammo Finder(0/1)"
+            },
+            {
+                "combo": [
+                    "Auto Rifle Targeting",
+                    "Linear Fusion Rifle Reserves"
+                ],
+                "reason": "Generic ETS - Scatter Projectile Targeting,Linear Fusion Rifle Reserves(0/2)"
+            }
+        ]
+    },
+    {
+        "classText": "hunter",
+        "type": "Helmet",
+        "name": "Qiao's Grin",
+        "power": "630",
+        "id": "\"\"\"6917529087059658459\"\"\"",
+        "reason": "Reason: No Armor Combos Available",
+        "reasons": []
+    },
+    {
+        "classText": "hunter",
+        "type": "Hunter Cloak",
+        "name": "Clandestine Maneuvers",
+        "power": "631",
+        "id": "\"\"\"6917529087391036430\"\"\"",
+        "reason": "Reason: No Armor Combos Available",
+        "reasons": []
+    },
+    {
+        "classText": "hunter",
+        "type": "Hunter Cloak",
+        "name": "Wing Contender",
+        "power": "650",
+        "id": "\"\"\"6917529087180086665\"\"\"",
+        "reason": "Reason: No Wanted Combos",
+        "reasons": [
+            {
+                "combo": [
+                    "Recuperation",
+                    "Sword Scavenger"
+                ],
+                "reason": "Duplicate Pair (2/0)"
+            },
+            {
+                "combo": [
+                    "Recuperation",
+                    "Fusion Rifle Scavenger"
+                ],
+                "reason": "Duplicate Pair (1/1)"
+            },
+            {
+                "combo": [
+                    "Invigoration",
+                    "Sword Scavenger"
+                ],
+                "reason": "Unwanted Perk"
+            },
+            {
+                "combo": [
+                    "Invigoration",
+                    "Fusion Rifle Scavenger"
+                ],
+                "reason": "Unwanted Perk"
+            }
+        ]
+    },
+    {
+        "classText": "hunter",
+        "type": "Leg Armor",
+        "name": "Dead End Cure 2.1",
+        "power": "631",
+        "id": "\"\"\"6917529087396868179\"\"\"",
+        "reason": "Reason: No Armor Combos Available",
+        "reasons": []
+    }
+]

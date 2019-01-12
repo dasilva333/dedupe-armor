@@ -1,34 +1,14 @@
 total junk items:13
 
-hunter Gauntlets Wildwood Grips light:=631 """6917529087396867322""" Reason: No Armor Combos Available
-
 hunter Chest Armor Wildwood Vest light:=631 """6917529087396862492""" Reason: No Armor Combos Available
 
 hunter Chest Armor Insight Rover Vest light:=631 """6917529087396865845""" Reason: No Armor Combos Available
-
-hunter Leg Armor Dead End Cure 2.1 light:=631 """6917529087396868179""" Reason: No Armor Combos Available
-
-hunter Hunter Cloak Clandestine Maneuvers light:=631 """6917529087391036430""" Reason: No Armor Combos Available
 
 hunter Chest Armor Wing Contender light:=650 """6917529086278883300""" Reason: No Wanted Combos
 "Unflinching Light Arms Aim" "Special Ammo Finder" - Duplicate Pair (2/2)
 "Unflinching Light Arms Aim" "Submachine Gun Reserves" - Duplicate Pair (2/0)
 "Unflinching Fusion Rifle Aim" "Special Ammo Finder" - Generic ETS - Unflinching Rifle Aim,Special Ammo Finder(1/0)
 "Unflinching Fusion Rifle Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Rifle Aim,Submachine Gun Reserves(1/0)
-
-hunter Helmet Woven Firesmith Mask light:=650 """6917529087306859922""" Reason: No Wanted Combos
-"Shotgun Targeting" "Special Ammo Finder" - Duplicate Pair (1/1)
-"Shotgun Targeting" "Linear Fusion Rifle Reserves" - Duplicate Pair (1/2)
-"Auto Rifle Targeting" "Special Ammo Finder" - Generic ETS - Scatter Projectile Targeting,Special Ammo Finder(0/1)
-"Auto Rifle Targeting" "Linear Fusion Rifle Reserves" - Generic ETS - Scatter Projectile Targeting,Linear Fusion Rifle Reserves(0/2)
-
-hunter Helmet Qiao's Grin light:=630 """6917529087059658459""" Reason: No Armor Combos Available
-
-hunter Hunter Cloak Wing Contender light:=650 """6917529087180086665""" Reason: No Wanted Combos
-"Recuperation" "Sword Scavenger" - Duplicate Pair (2/0)
-"Recuperation" "Fusion Rifle Scavenger" - Duplicate Pair (1/1)
-"Invigoration" "Sword Scavenger" - Unwanted Perk
-"Invigoration" "Fusion Rifle Scavenger" - Unwanted Perk
 
 hunter Chest Armor Tangled Web Vest light:=650 """6917529087005250671""" Reason: No Wanted Combos
 "Unflinching Submachine Gun Aim" "Submachine Gun Reserves" - Generic ETS - Unflinching Light Arms Aim,Submachine Gun Reserves(2/0)
@@ -53,3 +33,23 @@ hunter Chest Armor Woven Firesmith Vest light:=650 """6917529087327917862""" Rea
 "Unflinching Light Arms Aim" "Pulse Rifle Reserves" - Unwanted Perk
 "Unflinching Kinetic Aim" "Special Ammo Finder" - Duplicate Pair (1/1)
 "Unflinching Kinetic Aim" "Pulse Rifle Reserves" - Unwanted Perk
+
+hunter Gauntlets Wildwood Grips light:=631 """6917529087396867322""" Reason: No Armor Combos Available
+
+hunter Helmet Woven Firesmith Mask light:=650 """6917529087306859922""" Reason: No Wanted Combos
+"Shotgun Targeting" "Special Ammo Finder" - Duplicate Pair (1/1)
+"Shotgun Targeting" "Linear Fusion Rifle Reserves" - Duplicate Pair (1/2)
+"Auto Rifle Targeting" "Special Ammo Finder" - Generic ETS - Scatter Projectile Targeting,Special Ammo Finder(0/1)
+"Auto Rifle Targeting" "Linear Fusion Rifle Reserves" - Generic ETS - Scatter Projectile Targeting,Linear Fusion Rifle Reserves(0/2)
+
+hunter Helmet Qiao's Grin light:=630 """6917529087059658459""" Reason: No Armor Combos Available
+
+hunter Hunter Cloak Clandestine Maneuvers light:=631 """6917529087391036430""" Reason: No Armor Combos Available
+
+hunter Hunter Cloak Wing Contender light:=650 """6917529087180086665""" Reason: No Wanted Combos
+"Recuperation" "Sword Scavenger" - Duplicate Pair (2/0)
+"Recuperation" "Fusion Rifle Scavenger" - Duplicate Pair (1/1)
+"Invigoration" "Sword Scavenger" - Unwanted Perk
+"Invigoration" "Fusion Rifle Scavenger" - Unwanted Perk
+
+hunter Leg Armor Dead End Cure 2.1 light:=631 """6917529087396868179""" Reason: No Armor Combos Available

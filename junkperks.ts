@@ -29,12 +29,15 @@ var totalCount = "total junk items:" + dupeReport.length + "\n\n";
 var compiledJunkItemTemplate = _.template(jpf.junkPerkConfig.junkItemTemplate);
 var compiledJunkReasonTemplate = _.template(jpf.junkPerkConfig.junkReasonTemplate);
 
-dupeReport = _.map(_.sortBy(dupeReport), (junkItem) => {
+//sort items by type for both json/text reports
+dupeReport = _.sortBy(dupeReport, 'type');
+
+var dupeReportText = _.map(dupeReport, (junkItem) => {
     return compiledJunkItemTemplate(junkItem) + "\n" + _.map(junkItem.reasons, (junkItemReason) => {
         return compiledJunkReasonTemplate(junkItemReason) + "\n";
     }).join("");
 }).join("\n");
-fs.writeFileSync("report-v2.txt", totalCount + dupeReport);
+fs.writeFileSync("report-v2.txt", totalCount + dupeReportText);
 fs.writeFileSync("report-json.txt", JSON.stringify(dupeReport, null, 4));
 
 console.log(totalCount);
