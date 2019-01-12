@@ -41,18 +41,19 @@ var items = armorData.map(function (row) {
             //console.log("perk", lastWord, filteredPerks.indexOf(lastWord), lastWord.indexOf(filteredPerks));
             return filteredPerks.indexOf(lastWord) == -1;
         });
-        //if the amount of perks is 6 that means it's ....
-        if (armorPerks.value.length == 6) {
-            armorPerks.value.pop();
-        }
+        //TODO find the names of the new scourge raid armor
         var name = _.find(results, {
             label: "Name"
         }).value.toLowerCase();
-        if (name.indexOf("reverie") == -1 && name.indexOf("great hunt") == -1 && armorPerks.value.length == 5) {
-            armorPerks.value.pop();
+        var is4PA = name.indexOf("reverie") == -1 && name.indexOf("great hunt") == -1;
+        //it is 4 perk armor with a mod and/or shader so keep the first 4 perks in the array
+        if ( is4PA && armorPerks.value.length >=5 ){
+            armorPerks.value = armorPerks.value.slice(0, 4);
         }
-        //console.log("armorPerks", armorPerks.value);
-        //console.log("")
+        //it is 5-perk-armor with a mod and or shader so keep the first 5 perks in the array
+        else if ( !is4PA && armorPerks.value.length >=6 ) {
+            armorPerks.value = armorPerks.value.slice(0, 5);
+        }
         results.push(armorPerks);
         var armorCombos = _.clone(armorPerks);
         armorCombos.label = "Armor Combinations";
@@ -93,6 +94,10 @@ var items = armorData.map(function (row) {
         sort: "Armor",
         type: item.Type
     }
+    
+    /*if ( item.id.indexOf("6917529084543223866") > -1 ){
+        console.log("item", item);
+    }*/
     
     return item;
 });
